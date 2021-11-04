@@ -1,0 +1,27 @@
+.cards-block
+	&__list
+		display: flex
+		flex-wrap: wrap
+		max-width: 1286px
+
+		+desktop-big
+			max-width: 860px
+
+		+sm
+			flex-direction: column
+			align-items: center
+			justify-content: center
+
+	&__item
+		margin: 0 10px 76px 0
+
+		+sm
+			width: 100%
+			margin: 0 0 40px
+
+		&_visibility
+			+desktop-big
+				display: none
+
+	&__item_relative
+		margin: 0 0 0px

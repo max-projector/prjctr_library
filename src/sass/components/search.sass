@@ -1,0 +1,173 @@
+.search
+	$this: &
+
+	// margin-bottom: 24px
+
+	+smd
+		// position: absolute
+		top: -20px
+		width: 100%
+
+	+sm
+		top: -50px
+
+	&__rounded
+		svg
+			fill: white !important
+
+		input
+			border-radius: 100px
+			border: 1px solid $dark-gray
+
+
+
+	&__form
+		position: relative
+		display: flex
+		align-items: center
+		max-width: 1286px
+		height: 48px
+
+		+desktop-big
+			max-width: 100%
+			width: 355px
+
+		+md
+			max-width: 100%
+
+		
+
+		+hover
+			#{$this}__input
+				border: 2px solid $gray
+
+				&::-webkit-input-placeholder
+					color: $white
+
+				&::-moz-placeholder
+					color: $white
+
+			#{$this}__button
+				background: $gray
+
+	&__input
+		position: relative
+		display: flex
+		align-items: center
+		width: 95%
+		height: 100%
+		padding: 15px 30px 15px 15px
+		+MontSemiBold
+		font-size: 16px
+		line-height: 0.9em
+		color: $white
+		border: 2px solid $dark-gray
+		border-radius: 8px 0 0 8px
+		background: $black
+
+		+desktop-big
+			font-size: 14px
+
+		+smd
+			width: 100%
+			padding-right: 45px
+			border-radius: 8px
+
+		+sm
+			border-radius: 100px
+			border: 1px solid #201E29
+
+		+iphone
+			padding-top: 17px
+
+		+safari
+			padding-top: 18px
+
+		&::-ms-clear
+			display: none
+
+		&::-webkit-input-placeholder
+			color: $light-gray
+
+		&::-moz-placeholder
+			color: $light-gray
+
+		&:focus
+			border: 2px solid $gray
+
+			&::-webkit-input-placeholder
+				color: $white
+
+			&::-moz-placeholder
+				color: $white
+
+			~#{$this}__button
+				background: $gray
+
+			&+#{$this}__icon
+				.icon
+					fill: $white
+
+	&__button
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 64px
+		height: 100%
+		background: $dark-gray
+		border-radius: 0 6px 6px 0
+
+		&:focus
+			outline: 2px solid $gray
+			background: $gray
+
+		+smd
+			display: none
+
+		.icon
+			width: 18px
+			height: 18px
+			fill: $white
+
+
+
+
+	&__close
+		display: none
+		position: absolute
+		top: 15px
+		right: 90px
+		width: 18px
+		height: 18px
+		text-align: center
+		vertical-align: middle
+		background: $search-grey
+		border-radius: 50%
+
+		&.is-visible
+			display: block
+
+		+desktop-big
+			right: 75px
+
+		.icon
+			width: 9px
+			height: 9px
+			fill: $light-gray
+
+	&__icon
+		display: none
+
+		+smd
+			display: block
+			position: absolute
+			top: 15px
+			right: 20px
+
+			.icon
+				width: 18px
+				height: 18px
+				fill: $light-gray
+
+				+sm
+					fill: $white	

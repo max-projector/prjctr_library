@@ -1,0 +1,56 @@
+---
+title: Course
+---
+
+{% import "data/data.html" as data %} {% import "partials/_mixins.html" as
+mixins %} {% extends "layouts/_layout.html" %} {% block content %} {% set login
+= 'Увійти' %} {% include "partials/_header.html" %}
+<script src="../js/lib/carousely.js"></script>
+
+<style>
+  .container_padding-small {
+    padding-top: 20px;
+  }
+</style>
+
+<div>
+  <div class="container container_padding-min">
+    {% include "partials/_course-intro.html" %} {% include
+    "partials/_course-video-intro.html" %}
+    <div class="inner js-inner">
+      {% set sidebar = data.sidebarOtherTheme %} {% include
+      "partials/_course-menu.html" %}
+
+      <main class="main" id="content" style="margin-top: 0">
+        {% include "partials/_course-about.html" %} {% include
+        "partials/_course-mentor.html" %} {% set sliderMentors =
+        data.mainPageSliderMentors %} {% include
+        "partials/_course-mentors-slider.html" %} {% include
+        "partials/_course-program.html" %} {% set sliderCases =
+        data.mainPageDefaultCases %} {% include
+        "partials/_course-cases-slider.html" %} {% include
+        "partials/_course-match.html" %} {% include
+        "partials/_course-match-second.html" %} {% include
+        "partials/_course-library-promo.html" %} {% include
+        "partials/_course-how-is-learning.html" %} {% include
+        "partials/_course-partners.html" %} {% set sliderPopular =
+        data.mainPageSliderFeedback %} {% include
+        "partials/_feedback-slider.html" %} {% include
+        "partials/_course-networking.html" %} {% include
+        "partials/_course-questions.html" %} {% include
+        "partials/_course-case-video-popup.html" %} {% include
+        "partials/_course-case-gallery-popup.html" %} {% include
+        "partials/_course-feedback-popup.html" %}
+      </main>
+    </div>
+  </div>
+  <!-- _course-questions -->
+  {% include "partials/_course-registation.html" %} {% include
+  "partials/_course-similar.html" %} {% include
+  "partials/_course-consult-popup.html" %}
+  
+  {% include
+  "partials/_course-case-video-popup.html" %}  
+</div>
+
+<!-- {% endblock %} -->

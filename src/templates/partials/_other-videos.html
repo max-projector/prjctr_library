@@ -1,0 +1,17 @@
+<!-- begin other-videos -->
+
+<section class="other-videos">
+  <div class="container">
+    <h4 class="other-videos__title title title_tiny">Другие видео по теме</h4>
+
+    <ul class="other-videos__list">
+      {% for item in cards %}
+      <li class="other-videos__item">
+        {% include "partials/_card.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- end other-videos -->

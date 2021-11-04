@@ -1,0 +1,145 @@
+.intro
+	$this: &
+
+	overflow-x: hidden
+	padding-top: 72px
+
+	+md
+		overflow-x: visible
+
+	&__gift-container
+		position: relative
+		// left: 12px
+		// top: 13px
+
+		+hover
+			#{$this}__gift-text
+				color: white
+				border-bottom: 1px solid #fff
+
+			#{$this}__gift-image
+				fill: black
+				stroke: #fff
+
+	&__gift-text
+		font-size: 16px
+		+MontSemiBold
+
+	&__gift-image
+		stroke: #c39553
+		fill: #000
+		position: relative
+		top: 5px
+		margin-right: 7px
+
+	&__container
+		position: relative
+		display: flex
+		align-items: center
+		min-height: 648px
+		height: 648px
+
+		+md
+			flex-direction: column
+			align-items: flex-start
+			min-height: 830px
+			height: 830px
+
+		+sm
+			min-height: auto
+			height: auto
+
+	&__info
+		width: 583px
+
+		+desktop-big
+			width: 368px
+
+		+md
+			width: 100%
+
+	&__title
+		margin-bottom: 24px
+
+		+sm
+			margin-bottom: 32px
+
+	&__text
+		max-width: 344px
+		margin-bottom: 48px
+		line-height: 22px
+		color: $middle-gray
+
+		+md
+			max-width: 100%
+
+		+sm
+			display: none
+
+	&__action
+		display: flex
+		align-items: center
+
+		+md
+			justify-content: center
+
+		+xs
+			flex-direction: column-reverse
+
+	&__button
+		margin-right: 16px
+
+		+xs
+			margin-right: 0
+
+	&__price
+		position: relative
+		display: flex
+		font-size: 16px
+		line-height: 1.4em
+
+		+xs
+			margin-bottom: 20px
+			flex-direction: row
+			justify-content: center
+			width: 100%
+
+	&__currency
+		margin-right: 5px
+
+
+		&_symbol
+			display: block
+
+
+	&__image
+		position: absolute
+		bottom: 55px
+		right: 6%
+		width: 837px
+
+		+desktop-big
+			right: -9%
+
+		+desktop-small
+			right: -4%
+			width: 770px
+
+		+md
+			order: -1
+			position: relative
+			bottom: 0
+			width: 760px
+			height: 530px
+			margin-bottom: 30px
+
+		+sm
+			right: -3%
+			top: 32px
+			width: 100%
+			height: 100%
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain

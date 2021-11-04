@@ -1,0 +1,61 @@
+<div
+  class="card {% if item.cardMod %} card_{{ item.cardMod }} {% endif %} {% if item.active %} card_active {% endif %}"
+>
+  <a
+    class="card__link"
+    href="/video-page-unsigned-event-register.html"
+    tabindex="1"
+  >
+    {% if item.view == "playlist"%} {% else %}
+    <span class="card__favorite">{{ mixins.icon('bookmark-on')}}</span>
+    <!-- <span class="card__favorite">{{ mixins.icon('bookmark-off')}}</span>  -->
+    {% endif %} {% set unlogged = true %}
+
+    <div class="card__flex">
+      <div
+        class="card__image {% if item.cardMod %} card__image_{{ item.cardMod }} {% endif %}"
+      >
+        <div
+          class="card__progress-bar {% if item.watched %} is-active {% endif %}"
+        >
+          <div class="card__progress"></div>
+        </div>
+
+        <picture style="display: flex">
+          <source media="(min-width: 1024px)" srcset="{{ item.imageRetina }}" />
+          <img class="card__photo" src="{{ item.image }}" alt="Фото лектора" />
+        </picture>
+
+        <div class="card__label {% if item.new %} is-active {% endif %}">
+          <span class="card__label-text">Новое</span>
+        </div>
+
+        <div class="card__duration">
+          <span class="card__duration-text"
+            >{{ item.duration }} {% if item.view %}
+            {{mixins.icon('arrow-right')}} {{item.count}} відео {% endif %}
+          </span>
+        </div>
+      </div>
+
+      <p class="card__info">
+        <span class="card__category">{{ item.category }}</span>
+        <span class="card__year">{{ item.year }}</span>
+      </p>
+
+      <div>
+        <p
+          class="card__text {% if item.cardMod %} card__text_{{ item.cardMod }} {% endif %}"
+        >
+          {% if item.popular %} {{mixins.icon('fire')}} {% endif %} {{ item.text
+          }}
+        </p>
+        <p class="card__speaker-name">{{ item.speaker }}</p>
+      </div>
+    </div>
+  </a>
+
+  <a class="card__speaker link" href="{{ item.speakerLink }}" tabindex="1"
+    >{{ item.speaker }}</a
+  >
+</div>

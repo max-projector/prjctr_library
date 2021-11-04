@@ -1,0 +1,71 @@
+
+<!-- course-consult-popup -->
+<div class="course-consult-popup js-popup" data-name="consult">
+  <div class="login-popup course-consult-popup__inner">
+    <button class="course-consult-popup__close js-popup-close">
+      {{ mixins.icon('close-popup') }}
+    </button>
+
+    <p class="course-consult-popup__text">Проконсультуйте мене</p>
+
+    <div class="course-consult-popup__main" style="display: none;">
+      <div class="course-consult-popup__form">
+        <form action="">
+          <div class="course-consult-popup__row">
+            <input type="text" placeholder="Ім'я" />
+          </div>
+          <div class="course-consult-popup__row">
+            <input type="tel" placeholder="Номер телефону" />
+          </div>
+          <div class="course-consult-popup__row">
+            <input type="email" placeholder="Коли вам зручно говорити?" />
+          </div>
+
+          <div
+            class="course-consult-popup__row course-consult-popup__form_last"
+          >
+            <button
+              type="submit"
+              class="course-consult-popup__button course-consult-popup__btn_big course-consult-popup__btn_fullwidth"
+            >
+              Замовити консультацію
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="course-consult-popup__desc">
+        <div class="course-consult-popup__aside-item">
+          <div class="course-consult-popup__consult-section">
+            <img src="./img/nazar.png" class="course-consult-popup__nazar" />
+            <div class="text text_reg course-consult-popup__aside-item__desc">
+              <p>
+                Маєте питання? Не <br />
+                соромтесь їх задати.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-consult-popup__done-section">
+
+      <div class="course-consult-popup__consult-section">
+        <img src="./img/nazar.png" class="course-consult-popup__nazar" />
+        <div class="text text_reg course-consult-popup__done-desc"  style="
+        margin-left: 30px;
+    ">
+          <p>
+            Дякуємо, що звернулись!
+          </p>
+
+        <br/>
+        <p>
+            Менеджер школи зв'яжеться з вами протягом трьох днів і допоможе в усьому розібратись. На зв'язку :-)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

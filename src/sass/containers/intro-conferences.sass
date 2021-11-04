@@ -1,0 +1,119 @@
+.intro-conferences
+	position: relative
+	padding-top: 102px
+
+	&__blinking
+		animation: 1s blink ease infinite
+		margin-left: 6px
+
+	&__slider
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125)
+		min-height: 573px
+		height: 573px
+		margin: auto
+		overflow: hidden
+		position: relative
+		width: 100%
+
+		+sm
+			min-height: auto
+			height: auto
+
+	&__slide-track
+		animation: scroll 80s linear infinite
+		display: flex
+
+	&__slide
+		height: 576px
+		width: 264px
+		margin-right: 20px
+
+		img
+			height: 576px
+			width: 264px
+
+	&__content
+		z-index: 3
+
+	&__desc
+		font-size: 16px
+		margin-top: 17px
+		text-align: center
+
+	&__action
+		z-index: 10
+		position: absolute
+		bottom: 9%
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+
+		+sm
+			bottom: 20%
+
+		h1
+			font-family: 'TT Trailers Black', 'Arial', sans-serif
+			font-size: 80px
+			line-height: 1.1em
+			font-weight: 500
+			color: #fff
+			letter-spacing: 0em
+			width: 915px
+			right: 0
+			left: 0
+			text-align: center
+			margin-left: auto
+			margin-right: auto
+			z-index: 10
+
+			+smd
+				width: auto
+				font-size: 55px
+
+			+sm
+				font-size: 40px
+				line-height: 1.1em
+				width: auto
+				margin: 0 10px
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		margin-top: 34px
+
+		+sm
+			flex-direction: column
+
+	&__price
+		font-size: 16px
+
+	&__button
+		min-width: 224px
+		z-index: 3
+
+		&_margin
+
+			margin-right: 20px
+
+		+sm
+			margin-right: auto
+
+			&_margin
+				margin-right: 0
+				margin-bottom: 20px
+
+@keyframes scroll
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(calc(-284px * 10))
+
+@keyframes "blink"
+	from, to 
+		opacity: 0
+
+	50%
+		opacity: 1

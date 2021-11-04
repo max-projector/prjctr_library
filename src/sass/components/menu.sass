@@ -1,0 +1,231 @@
+.menu
+	$this: &
+
+	padding: 0 15px
+
+	+smd
+		padding: 0
+
+	&__list
+		display: flex
+		align-items: center
+
+		+smd
+			flex-wrap: wrap
+
+	&__point
+		position: relative
+		margin-right: 22px
+		padding: 20px 10px
+
+		+hover
+			#{$this}__sublist
+				visibility: visible
+				position: absolute
+				opacity: 1
+				transform: translateY(0.25rem)
+				pointer-events: all
+
+		+md
+			margin-right: 12px
+
+		+smd
+			width: 100%
+			margin: 0 0 28px
+			padding: 0
+
+		&.is-active
+			#{$this}__link
+				color: $golden
+				pointer-events: none
+				border-bottom: 2px solid $golden
+
+				+smd
+					+MontSemiBold
+					font-size: 16px
+					text-transform: none
+					letter-spacing: 0
+
+		.icon
+			width: 8px
+			height: 4px
+			fill: $light-gray
+
+	&__link
+		display: flex
+		align-items: center
+		+MontBold
+		font-size: 12px
+		line-height: 1.5em
+		color: $white
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		background: transparent
+		cursor: pointer
+
+		+hover
+			color: $golden
+
+		+md
+			font-size: 10px
+
+		+smd
+			padding-bottom: 16px
+			font-size: 12px
+			color: $light-gray
+
+		&_mob
+			+smd
+				display: none
+
+		.icon-arrow-down
+			margin-left: 4px
+			width: 8px
+			height: 4px
+			fill: $light-gray
+
+			+smd
+				display: none
+
+	&__sublist
+		visibility: hidden
+		position: absolute
+		top: 52px
+		left: 0
+		box-shadow: 0px 16px 35px 0px rgba(16, 16, 20, 0.7)
+		border-radius: 8px
+		opacity: 0
+		transition: all 0.35s cubic-bezier(0.2,0.8,0.2,1)
+		pointer-events: none
+
+		&.is-visible
+			visibility: visible
+			opacity: 1
+			pointer-events: all
+			transform: translateY(0.25rem)
+
+		+smd
+			visibility: visible
+			position: static
+			opacity: 1
+			border-radius: 0
+			box-shadow: none
+			pointer-events: all
+
+	&__subpoint
+		display: flex
+		align-items: center
+		width: 272px
+		border-bottom: 1px solid rgba(140, 137, 154, 0.15)
+		background: $popup-grey
+
+		&:first-of-type
+			border-radius: 8px 8px 0 0
+
+			+smd
+				border-radius: 0
+
+		&:last-of-type
+			border-radius: 0 0 8px 8px
+			border-bottom: none
+
+			+smd
+				border-radius: 0
+				border-bottom: 1px solid rgba(140, 137, 154, 0.15)
+
+		+smd
+			width: 100%
+			margin: 0 0 14px
+			background: $black
+
+			&:last-of-type
+				margin: 0
+
+		+hover
+			background: $header-grey
+
+		&.is-active
+			border-bottom: 1px solid $golden
+
+			&:last-of-type
+				border-bottom: none
+
+				+smd
+					border-bottom: 1px solid $golden
+
+			#{$this}__subpoint-name
+				color: $golden
+
+			#{$this}__subpoint-link
+				pointer-events: none
+
+	&__subpoint-link
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		width: 100%
+		padding: 16px
+
+		+smd
+			align-items: center
+			padding: 0
+			padding-bottom: 14px
+
+		.icon-arrow-open
+			min-width: 14px
+			min-height: 14px
+			margin-left: auto
+			padding-top: 3px
+			stroke: $light-gray
+
+			+smd
+				padding-top: 0
+
+	&__subpoint-image
+		min-width: 36px
+		min-height: 36px
+		width: 36px
+		height: 36px
+		margin-right: 10px
+		border-radius: 50%
+		overflow: hidden
+
+		+smd
+			display: none
+
+	&__subpoint-pic
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	&__subpoint-text
+		display: flex
+		flex-direction: column
+
+	&__subpoint-name
+		+MontSemiBold
+		font-size: 14px
+		line-height: 18px
+		color: $white
+
+		+smd
+			font-size: 16px
+			line-height: 23px
+
+	&__subpoint-subtext
+		+MontSemiBold
+		font-size: 12px
+		line-height: 17px
+		color: $light-gray
+
+		+smd
+			display: none
+
+	&__subpoint-icon
+		margin-right: 8px
+
+		.icon
+			width: 20px
+			height: 20px
+			fill: $light-gray
+

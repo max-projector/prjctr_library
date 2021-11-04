@@ -1,0 +1,149 @@
+.course-program
+	a
+		background: linear-gradient(to right,#535353 0%,#2c2c2c 100%) 0 100%/1px 1px repeat-x
+		color: #7f7f7f
+
+		+hover
+			background: linear-gradient(to right,#fff 0%,#fff 100%) 0 100%/1px 1px repeat-x
+			color: #fff
+
+	h1
+		padding-top: 60px
+		font-style: normal
+		font-family: 'TT Trailers Black', 'Arial', sans-serif
+		text-decoration: none
+		text-transform: none
+		font-size: 60px
+		font-weight: 500
+		color: #fff
+		letter-spacing: -1.2px
+		line-height: 1.1em
+
+	&__program
+		display: flex
+		margin-top: 40px
+
+		+sm
+			flex-direction: column
+
+	&__program__desc
+		margin-right: 83px
+
+		img
+			width: 254px
+			height: 265px
+			transform: scaleX(-1)
+
+			+sm
+				width: 100%
+				height: 100%
+				transform: scaleX(-1)
+				padding: 0 20%
+
+		+sm
+			width: 100%
+			margin-right: 0
+			margin-bottom: 50px
+
+
+	&__program__list
+		position: relative
+		flex-shrink: 0
+		width: 50%
+		counter-reset: heading
+		margin-top: 10px
+
+		+sm
+			width: 100%
+			margin-top: 0
+
+	&__program-module:not(:last-child)
+		margin-bottom: 40px
+
+	&__program-module
+		position: relative
+		// padding-right: 20%
+
+		+sm
+			padding-right: 0
+
+	&__program-module:before
+		counter-increment: heading
+		content: "" counter(heading) " "
+		letter-spacing: 1.6px
+		font-size: 13px
+		color: rgba(142, 114, 42, 1)
+		text-transform: uppercase
+		font-style: normal
+		font-weight: 500
+		text-decoration: none
+		position: absolute
+		top: -4px
+		left: -23px
+
+		+sm
+			position: relative
+			top: -7px
+			left: 0
+
+	&__program-module__items
+		padding-bottom: 20px
+
+		+sm
+			padding-bottom: 0
+
+	&__program-module__item-title,
+	&__program-module__title
+		margin-bottom: 8px
+
+	&__title-reg
+		font-weight: 100
+
+	&__title-reg_big
+		font-size: 24px
+		letter-spacing: -0.4px
+
+	&__text_reg,
+	&__text_sm
+		font-size: 16px
+		line-height: 1.3
+
+	&__text
+		letter-spacing: -0.4px
+
+	&__text,
+	&__text a
+		font-weight: 500
+
+	&__text p
+		font-size: 14px
+		color: rgba(109, 117, 127, 1)
+		letter-spacing: -0.2px
+		vertical-align: top
+
+	&__program-module__item-desc li::before
+		content: "\2022"
+		color: $courses-brown
+		font-weight: bold
+		display: inline-block
+		width: 1em
+		margin-left: -1em
+
+	&__text	ul
+		list-style: none
+		margin-left: 15px
+
+	&__text	ul li
+		font-size: 14px
+		color: $courses-light-gray
+		letter-spacing: -.2px
+		vertical-align: top
+		padding-bottom: 10px
+
+	&__text	ul li::before
+		content: "\2022"
+		color: #8e722a
+		font-weight: bold
+		display: inline-block
+		width: 1em
+		margin-left: -1em

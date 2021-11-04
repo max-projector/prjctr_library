@@ -1,0 +1,117 @@
+.course-similar
+	h3
+		padding-top: 60px
+
+	&__section
+		padding: 20px 0
+
+	&__others
+		display: flex
+		margin-bottom: 100px
+
+		+smd
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			flex-direction: column
+
+	&__item
+		border: 1px #2f2f2f solid
+		padding: 26px 40px 17px 23px
+		max-width: 338px
+		height: 240px
+		width: 100%
+		display: flex
+		flex-direction: column
+		cursor: pointer
+
+	&__item:hover
+		border: 1px white solid
+		transition: .5s!important
+
+	&__title
+		font-size: 24px
+		line-height: 27px
+		font-style: normal
+		font-weight: 500
+		color: rgba(142, 114, 42, 1)
+		display: block
+
+	&__desc
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		color: rgba(109, 117, 127, 1)
+		display: block
+
+	&__price
+		font-style: normal
+		font-weight: 500
+		font-size: 14px
+		color: rgba(109, 117, 127, 1)
+		display: block
+
+	&__bottom
+		margin-top: auto
+
+	&__cols_centered &__cols__col
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__cols_divided &__cols__col
+		position: relative
+		margin-bottom: 0
+
+	&__cols_4 &__cols__col
+		width: 25%
+
+	&__cols__col
+		margin-bottom: 50px
+
+	&__partner
+		text-align: center
+		position: relative
+		padding-top: 20px
+		padding-bottom: 40px
+		margin-left: auto
+		margin-right: auto
+
+	&__partner_logo-only
+		padding-bottom: 20px
+
+	&__partner_logo-only &__partner__logo
+		height: auto
+		margin-bottom: 0
+
+	&__partner__logo
+		height: 50px
+		margin-bottom: 30px
+
+	&__partner__logo img
+		max-width: 100%
+		max-height: 100%
+
+	&__cols_divided &__cols__col::after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 1px
+		background-color: #242424
+
+//   @media only screen and (max-width: 767px) {
+//     .cols_sm-2 .cols__col {
+//       width: 50%;
+//     }
+
+//     .partner {
+//       width: 100%;
+//     }
+
+//     .cols_divided .cols__col::after {
+//       display: none;
+//     }
+//   }

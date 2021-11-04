@@ -1,0 +1,135 @@
+<!-- begin course-menu -->
+
+<div class="course-menu js-filters-slider" id="menu-center">
+  <ul class="course-menu__list">
+    <li class="course-menu__point js-course-menu-point is-active" tabindex="1">
+      <a class="course-menu__button" href="#about">
+        <span class="course-menu__name">Про курс</span></a
+      >
+    </li>
+
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#curator">
+        <span class="course-menu__name">Наставник</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#program">
+        <span class="course-menu__name">Програма</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#cases">
+        <span class="course-menu__name">Кейси</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#for-whom">
+        <span class="course-menu__name">Для кого?</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#about-training">
+        <span class="course-menu__name">Про навчання</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#partners">
+        <span class="course-menu__name">Партнери</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#reviews">
+        <span class="course-menu__name">Відгуки</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#networking">
+        <span class="course-menu__name">Нетворкинг</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point" tabindex="1">
+      <a class="course-menu__button" href="#questions">
+        <span class="course-menu__name">Питання</span></a
+      >
+    </li>
+
+    <li class="course-menu__point js-course-menu-point course-menu__register-btn" tabindex="1">
+      <a class="course-menu__button">
+        <span class="course-menu__name">Реєстрація</span></a
+      >
+    </li>
+  </ul>
+</div>
+
+<!-- end course-menu -->
+<script>
+  $(function () {
+    $('.course-menu__list a').click(function() {
+   
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+        $('html,body').stop();
+				$('html,body').animate({
+					scrollTop: target.offset().top - 68
+				}, 700);
+                // $(".course-menu__list > li").removeClass("is-active");
+				$(this).addClass("is-active");
+				return false;
+			}
+		}
+	});
+
+
+
+    $(window).scroll(function () {
+      $(".scroll-section").each(function () {
+        if (ScrollView($(this))) {
+          var id = $(this).attr("id");
+          $(".course-menu__list > li").removeClass("is-active");
+          $(".course-menu__list > li > a[href='#" + id + "']")
+            .parent()
+            .addClass("is-active");
+        }
+      });
+    });
+    function ScrollView(element) {
+      var win = $(window);
+      var winTop = win.scrollTop();
+      var winBottom = winTop + win.height();
+      var elementTop = element.offset().top;
+      var elementBottom = elementTop + element.height();
+
+      if (elementBottom <= winBottom && elementTop >= winTop) {
+        return true;
+      }
+      return false;
+    }
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(".course-menu__register-btn").click(function () {
+      $('html,body').stop();
+      $("html, body").animate(
+        {
+          scrollTop: $(".course-registration").offset().top - 100,
+        },
+        2000
+      );
+    });
+  });
+</script>
+<!-- https://jsfiddle.net/JacquesMarais/umehyrza/6/ -->

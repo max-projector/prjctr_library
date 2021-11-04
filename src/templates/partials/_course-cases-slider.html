@@ -1,0 +1,66 @@
+<!-- begin course-cases-slider -->
+
+<div class="course-cases-slider scroll-section" id="cases">
+  <div class="course-cases-slider__heading">
+    <h3 class="course-title">Кейси студентів</h3>
+  </div>
+ 
+  <div class="course-cases-slider__slider">
+    <div class="course-cases-slider__inner gallery js-carousely" data-carousely='{ "cellAlign": "left" }'>
+      {% for item in sliderCases %}
+      <div class="course-cases-slider__case-card gallery-cell">
+        <div class="course-cases-slider__image-section">
+          {% if item.video %}
+          <button
+            class="js-open-popup-button"
+            data-popup="case-video"
+          >
+            <img
+              class="course-cases-slider__play-btn"
+              src="./icons/play-btn.svg"
+              alt=""
+            />
+          </button>
+          {% endif %} {% if item.gallery %}
+          <button
+            class="js-open-popup-button"
+            data-popup="case-gallery"
+          >
+            <img
+              class="course-cases-slider__play-btn"
+              src="./icons/gallery.svg"
+              alt=""
+            />
+          </button>
+          {% endif %} {% if item.file %}
+          <a href="https://books.ifmo.ru/file/pdf/1917.pdf" target="_blank">
+            <img
+              class="course-cases-slider__play-btn"
+              src="./icons/file.svg"
+              alt=""
+            />
+          </a>
+
+          {% endif %}
+
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{{ item.imageRetina }}"
+            />
+            <img
+              class="course-cases-slider__photo"
+              src="{{ item.image }}"
+              alt="Фото работы"
+            />
+          </picture>
+        </div>
+        <span class="course-cases-slider__position">{{ item.student }}</span>
+        <span class="course-cases-slider__name">{{ item.text }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- end course-cases-slider -->

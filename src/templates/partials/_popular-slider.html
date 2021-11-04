@@ -1,0 +1,47 @@
+<!-- begin popular-lections -->
+
+<section class="popular-lections">
+  <div class="popular-lections__heading">
+    <h4 class="popular-lections__title title title_tiny">{{ mixins.icon('fire') }} Популярные лекции</h4>
+
+    <button class="popular-lections__button button button_dark" type="button" tabindex="1">Ещё <span class="popular-lections__amount">44</span></button>
+  </div>
+
+  <div class="popular-lections__slider">
+    <div class="popular-lections__inner">
+        {% for item in sliderPopular %}
+        <div class="popular-lections__slide card">
+          <a class="card__link" href="{{ item.link }}" tabindex="1">
+            <span class="card__favorite">{{ mixins.icon('bookmark-off') }}</span>
+    
+            <div class="card__image card__image_vertical">
+              <div class="card__progress-bar {% if item.watched %} is-active {% endif %}">
+                <div class="card__progress"></div>
+              </div>
+
+              <div class="card__duration">
+                <span class="card__duration-text"> {{ item.duration }}</span>
+              </div>
+
+              <picture>
+                <source media="(min-width: 1024px)" srcset="{{ item.imageRetina }}"/>
+                <img class="card__photo" src="{{ item.image }}" alt="Фото лектора"/>
+              </picture>
+            </div>
+
+            <p class="card__info">
+              <span class="card__year">{{ item.year }}</span>
+              <span class="card__category">{{ item.category }}</span>
+            </p>
+
+            <p class="card__text">{{ item.text }}</p>
+          </a>
+
+          <a class="card__speaker link" href="{{ item.speakerLink }}" tabindex="1">{{ item.speaker }}</a>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- end popular-lections -->

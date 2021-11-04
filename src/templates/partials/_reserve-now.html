@@ -1,0 +1,101 @@
+<!-- begin reserve-now -->
+
+<section class="reserve-now">
+  <div class="reserve-now__data">
+    <a class="reserve-now__link link" href="#">Маркетинг</a>
+    <span>2 сентября 2019</span>
+  </div>
+
+  <h2 class="reserve-now__title title title_smaller title_smaller_mob">Проектирование мобильных приложений</h2>
+
+  <p class="reserve-now__data reserve-now__data_margin"><a class="link link_hover" href="#">Дмитрий Корнилов</a> — CEO и со-основатель <a class="link" href="#">FFFACE</a></p>
+
+  {% if userIsSigned %}
+  <div class="reserve-now__video-block">
+    <div class="reserve-now__cover js-video-cover">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="./img/image@2x.jpg" />
+        <source media="(min-width: 500px)" srcset="./img/image.jpg" />
+        <source media="(min-width: 320px)" srcset="./img/image-mobile.jpg" />
+        <img src="./img/image@2x.jpg" alt="Фото лектора" />
+      </picture>
+
+      <button class="reserve-now__play js-video-play-button" type="button">
+        {{ mixins.icon('arrow-right') }}
+      </button>
+    </div>
+
+    <div class="reserve-now__video js-video">
+      <iframe class="reserve-now__iframe" src="https://player.vimeo.com/video/254988878" frameborder="0" allow="autoplay; fullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  {% else %}
+
+  <div class="reserve-now__video-block">
+    <div class="reserve-now__cover reserve-now__cover_shadow">
+      <picture>
+  
+        <img src="./img/redesign.png" alt="Фото лектора" />
+      </picture>
+    
+      <div class="reserve-now__action">
+        <div class="reserve-now__container" style="width: 100%;">
+          <div class="reserve-now__video-block__section">
+            <div>
+              <span style="
+    margin-bottom: 10px;
+">Ти з нами?</span>
+            <span>У прямому ефірі 15 жовтня, о 14.00</span>
+          </div>
+
+          <button class="reserve-now__button reserve-now__button_margin button button_wider js-open-popup-button" type="button" data-popup="subscribe">
+            <span class="button__content">
+              Забронювати місце
+            </span>
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="reserve-now__inner">
+    <ul class="reserve-now__socials socials">
+      <li class="socials__share" aria-label="Поделиться видео">
+        {{ mixins.icon('share') }}
+      </li>
+      {% for item in data.socials %}
+      <li class="socials__item">
+        <button class="socials__button" type="button" aria-label="{{ item.info }}">
+          {{ mixins.icon(item.icon) }}
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="reserve-now__main">
+      <div class="reserve-now__tags tags">
+        <ul class="tags__list">
+          {% for item in data.tags %}
+          <li class="tags__item">
+            <a class="tags__link" href="{{ item.link }}">
+              {{ item.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="reserve-now__info-block">
+        {% include "partials/_info-block.html" %}
+      </div>
+
+      <a class="reserve-now__button button button_dark button_height" href="#" target="_blank">Открыть презентацию из видео</a>
+    </div>
+  </div>
+</section>
+
+<!-- end reserve-now -->

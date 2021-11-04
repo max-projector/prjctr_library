@@ -1,0 +1,29 @@
+<!-- begin pagination-top -->
+
+<div class="pagination-top">
+
+  <a class="pagination-top__back-button back-button" href="main-page-unlogged.html">
+    {{ mixins.icon('arrow-left-white-custom') }}
+  </a>
+
+  {% if unlogged === true %}
+  <div class="pagination-top__like-button button button_smaller button_bold">
+    <button class="button__link js-open-popup-button" type="button" data-popup="like">
+      {{ mixins.icon('bookmark-off') }}
+      Додати обране
+    </button>
+  </div>
+
+  {% else %}
+
+  <div class="pagination-top__like-button button button_smaller button_bold">
+    <button class="button__link" type="button">
+      {{ mixins.icon('bookmark-on') }}
+      Додати обране
+    </button>
+  </div>
+  {% endif %}
+
+</div>
+
+<!-- end pagination-top -->

@@ -1,0 +1,41 @@
+ProjectTitle: Бібліотека Projector
+
+PageList:
+- file: video-page-signed-new.html
+  ready: 100  
+
+- file: video-page-unsigned-event-register.html
+  ready: 100    
+  
+- file: main-page-redesign.html
+  ready: 100
+
+- file: main-page-unlogged.html
+  ready: 100
+
+- file: main-page-logged-in.html
+  ready: 100
+
+- file: history-page.html
+  ready: 100
+
+- file: other-theme-page.html
+  ready: 100
+
+- file: search-results-empty-page.html
+  ready: 100
+
+- file: video-page-signed.html
+  ready: 100
+
+- file: video-page-unsigned.html
+  ready: 100
+
+- file: course-landing.html
+  ready: 100
+
+- file: page.html
+  ready: 100
+
+- file: admin-panel.html
+  ready: 100

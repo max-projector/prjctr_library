@@ -1,0 +1,37 @@
+<!-- begin course-mentors-slider -->
+
+
+
+<div class="course-mentors-slider scroll-section" id="curators">
+  <div class="course-mentors-slider__heading">
+    <h3 class="course-title">Наставники</h3>
+  </div>
+
+  <div class="course-mentors-slider__slider">
+    <div class="course-mentors-slider__inner gallery js-carousely" data-carousely='{ "cellAlign": "left" }'>
+      {% for item in sliderMentors %}
+      <div class="course-mentors-slider__student-card gallery-cell">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="{{ item.imageRetina }}" />
+          <img
+            class="course-mentors-slider__photo"
+            src="{{ item.image }}"
+            alt="Фото лектора"
+          />
+        </picture>
+        <span class="course-mentors-slider__position">{{ item.role }}</span>
+        <span class="course-mentors-slider__name">{{ item.speaker }}</span>
+
+        <div class="course-mentors-slider__feedback">
+          <p class="course-mentors-slider__student-feedback">
+            Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для 
+          </p>
+        </div>
+        <img class="course-mentors-slider__company-logo" src="{{ item.company_logo }}" alt="" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- end course-mentors-slider -->

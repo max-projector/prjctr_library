@@ -1,0 +1,103 @@
+.intro-black-friday
+	position: relative
+	// padding-top: 102px
+	height: 552px
+	background: #36343E
+
+	&__blinking
+		animation: 1s blink ease infinite
+		margin-left: 6px
+
+	&__slider
+		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125)
+		min-height: 573px
+		height: 573px
+		margin: auto
+		overflow: hidden
+		position: relative
+		width: 100%
+
+		+sm
+			min-height: auto
+			height: auto
+
+	&__slide-track
+		animation: scroll 80s linear infinite
+		display: flex
+
+	&__slide
+		height: 576px
+		width: 264px
+		margin-right: 20px
+
+		img
+			height: 576px
+			width: 264px
+
+	&__content
+		z-index: 3
+
+	&__desc
+		font-size: 16px
+		margin-top: 17px
+		text-align: center
+
+	&__action
+		z-index: 10
+		position: absolute
+		bottom: 9%
+		display: flex
+		flex-direction: column
+		align-items: center
+		// width: 100%
+
+		+sm
+			bottom: 20%
+
+		h1
+			+MontSemiBold
+			font-size: 24px
+			font-weight: 400
+			color: #fff
+			margin-bottom: 36px
+			z-index: 10
+
+			+smd
+				font-size: 22px
+
+			+sm
+				font-size: 20px
+				line-height: 1.1em
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-top: 34px
+
+		+sm
+			flex-direction: column
+
+	&__price
+		font-size: 16px
+
+	&__button
+		padding: 19px 32px
+		z-index: 3
+
+		+hover
+			color: black
+
+@keyframes scroll
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(calc(-284px * 10))
+
+@keyframes "blink"
+	from, to 
+		opacity: 0
+
+	50%
+		opacity: 1

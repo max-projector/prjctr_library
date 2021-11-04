@@ -1,0 +1,41 @@
+
+<!-- course-video-promo-popup -->
+<div class="course-video-promo-popup js-popup" data-name="video-promo">
+  <div class="login-popup course-video-promo-popup__inner">
+    <button class="course-video-promo-popup__close js-popup-close">
+      {{ mixins.icon('close-popup') }}
+    </button>
+
+
+    <div class="vimeo-full-width">
+    <iframe class="iframe" src="//player.vimeo.com/video/191777290?title=0&byline=0&portrait=0&sidedock=0&autoplay=1&background=0&muted=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+
+   
+  </div>   
+</div>
+
+<style>
+.vimeo-full-width {
+    /* padding: 56.25% 0 0 0; */
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.vimeo-full-width iframe {
+
+    width: 100% !important;
+    height: auto !important;
+}
+</style>
+
+<!-- <script>
+  var iframe = $('#vimeo_player')[0],
+      player = $f(iframe),
+      status = $('.status');
+
+      player.addEvent('ready', function() {
+          player.api('setVolume', 0);
+      });
+  </script> -->

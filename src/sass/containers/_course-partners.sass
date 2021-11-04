@@ -1,0 +1,108 @@
+.course-partners
+	margin-top: 50px
+
+	a
+		background: linear-gradient(to right,#535353 0%,#2c2c2c 100%) 0 100%/1px 1px repeat-x
+		color: #7f7f7f
+
+		+hover
+			background: linear-gradient(to right,#fff 0%,#fff 100%) 0 100%/1px 1px repeat-x
+			color: #fff
+
+	h1
+		padding-top: 60px
+		padding-bottom: 40px
+		font-style: normal
+		font-family: 'TT Trailers Black', 'Arial', sans-serif
+		text-decoration: none
+		text-transform: none
+		font-size: 60px
+		font-weight: 500
+		color: #fff
+		letter-spacing: -1.2px
+		line-height: 1.1em
+
+	&__program
+		display: flex
+		margin-top: 40px
+
+		+sm
+			flex-direction: column
+
+	&__program__desc
+		flex-shrink: 0
+		width: 25%
+		margin-right: 70px
+		margin-bottom: 50px
+
+		+sm
+			width: 100%
+
+		p
+			font-size: 16px
+			color: $courses-light-gray
+			letter-spacing: -.2px
+			vertical-align: top
+
+	&__program__list
+		position: relative
+		flex-shrink: 0
+		width: 50%
+
+		+sm
+			width: 100%
+			padding-left: 23px
+
+	&__program-module:not(:last-child)
+		margin-bottom: 45px
+
+	&__program-module
+		position: relative
+		padding-right: 20%
+
+		+sm
+			padding-right: 0
+
+	&__program-module__items
+
+	&__program-module__item
+		margin-bottom: 20px
+
+		img
+			width: 166px
+			margin-bottom: 5px
+
+	&__program-module__item:before
+		content: " — "
+		letter-spacing: 1.6px
+		font-size: 13px
+		color: #8e722a
+		text-transform: uppercase
+		font-style: normal
+		font-weight: 500
+		text-decoration: none
+		position: absolute
+		top: 10px
+		left: -23px
+
+	&__program-module__item-title,
+	&__program-module__title
+		margin-bottom: 15px
+
+	&__text_reg,
+	&__text_sm
+		font-size: 16px
+		line-height: 1.3
+
+	&__text
+		letter-spacing: -0.4px
+
+	&__text,
+	&__text a
+		font-weight: 500
+
+	&__text p
+		font-size: 14px
+		color: rgba(109, 117, 127, 1)
+		letter-spacing: -0.2px
+		vertical-align: top

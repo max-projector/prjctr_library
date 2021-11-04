@@ -1,0 +1,26 @@
+<!-- begin search -->
+
+<div class="search">
+  <div style="display: flex; justify-content: flex-end">
+    <form class="search__form" action="#" method="get">
+      <input
+        class="search__input js-search"
+        type="text"
+        placeholder="Пошук"
+        id="search"
+        name="search"
+        aria-label="Поиск"
+        tabindex="1"
+      />
+      <span class="search__icon">{{mixins.icon('search')}}</span>
+      <button class="search__close js-search-clear" type="button" tabindex="1">
+        {{ mixins.icon('close-search') }}
+      </button>
+      <button class="search__button" type="submit" tabindex="1">
+        {{mixins.icon('search')}}
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- end search -->

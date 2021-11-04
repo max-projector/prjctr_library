@@ -1,0 +1,55 @@
+---
+title: Main page - logged-in
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Костянтин Костянтинопільський' %}
+  {% include "partials/_header.html" %}
+
+  <div class="container container_padding">
+    <h1 class="title title_small-padding js-main-title">Библиотека</h1>
+
+    {% include "partials/_subscribe-info.html" %}
+
+    <div class="inner js-inner">
+      {% set sidebar = data.sidebar %}
+      {% include "partials/_sidebar.html" %}
+
+      <main class="main" id="content">
+        {% include "partials/_search.html" %}
+
+        {% set cards = data.mainPageBigCards %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set cards = data.mainPageDefaultCards %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set sliderPopular = data.mainPageSliderPopular %}
+        {% include "partials/_popular-slider.html" %}
+
+        {% set hugeCard = data.mainPageHugeCard %}
+        {% include "partials/_huge-card.html" %}
+
+        {% set cards = data.mainPageDefaultCards2 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% include "partials/_selected-slider.html" %}
+
+        {% set cards = data.mainPageBigCards2 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set cards = data.mainPageDefaultCards3 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% include "partials/_pagination.html" %}
+      </main>
+    </div>
+  </div>
+{% endblock %}

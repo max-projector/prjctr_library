@@ -1,0 +1,246 @@
+.header
+	$this: &
+
+	z-index: 1000
+	position: fixed
+	width: 100%
+	height: 72px
+	+MontBold
+	font-size: 12px
+	line-height: 1.5em
+	color: $white
+	background-color: $black
+
+	+md
+		font-size: 10px
+
+	+smd
+		font-size: 12px
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 100%
+		width: 100%
+
+	&__logo
+		margin-right: 25px
+
+	&__burger
+		display: none
+
+		.icon
+			width: 30px
+			height: 10px
+			fill: $white
+
+		+smd
+			display: block
+			margin-left: auto
+
+			&.is-hidden
+				display: none
+
+	&__close
+		display: none
+
+		+smd
+			&.is-visible
+				display: flex
+				justify-content: flex-end
+				align-items: center
+				width: 50px
+				height: 50px
+				margin-left: auto
+
+		.icon
+			width: 21px
+			height: 21px
+			fill: $white
+
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+
+		+smd
+			z-index: 1000
+			display: none
+			position: absolute
+			top: 64px
+			right: 0
+			width: 100%
+			height: calc(100vh - 64px)
+			padding: 20px 20px 75px
+			background-color: $black
+			overflow-y: auto
+
+			&.is-visible
+				display: block
+
+	&__actions
+		display: flex
+		align-items: center
+		margin-left: auto
+		padding-bottom: 1px
+		letter-spacing: 0.1em
+
+		+smd
+			margin-left: 0
+			align-items: flex-start
+			flex-direction: column
+
+	&__link
+		display: none
+
+		+md
+			font-size: 10px
+
+		+smd
+			order: -2
+			display: block
+			margin-right: auto
+			font-size: 16px
+			line-height: 1.4em
+			color: $white
+
+		&.is-active
+			color: $golden
+			pointer-events: none
+
+	&__restream
+		margin-right: 50px
+		color: #8C899A
+		text-transform: uppercase
+		font-size: 12px
+
+		+md
+			font-size: 10px
+			margin-right: 15px
+
+		+smd
+			margin: 10px 0 
+
+		img
+			+md
+				width: 65px
+
+	&__phone
+		margin-right: 32px
+		color: $white
+
+		+md
+			font-size: 10px
+
+		+smd
+			margin-right: 0
+			font-size: 16px
+
+	&__languages
+		position: relative
+		margin-right: 43px
+		margin-left: auto
+
+		+smd
+			order: -1
+			margin-right: 24px
+			margin-left: 0
+
+		+hover
+			#{$this}__languages-list
+				display: block
+				position: absolute
+				top: 18px
+				left: 0
+				padding-top: 7px
+				background: $black
+
+	&__languages-button
+		display: flex
+		align-items: center
+		+MontBold
+		font-size: 12px
+		line-height: 1.5em
+		color: $white
+		letter-spacing: 0.1em
+
+		+md
+			font-size: 10px
+
+		+smd
+			font-size: 16px
+
+		.icon
+			width: 8px
+			height: 4px
+			margin-left: 4px
+			fill: $light-gray
+
+	&__languages-list
+		display: none
+
+		&.is-visible
+			display: block
+			position: absolute
+			top: 27px
+			left: 0
+			background: $black
+
+	&__languages-item
+		+MontBold
+		font-size: 12px
+		line-height: 1.5em
+		color: $white
+		cursor: pointer
+
+		+md
+			font-size: 10px
+
+		+smd
+			font-size: 16px
+
+	&__languages-select
+		display: none
+
+	&__login
+		display: flex
+		align-items: center
+		+MontBold
+		font-size: 12px
+		line-height: 1.5em
+		color: $white
+		text-transform: uppercase
+		letter-spacing: 0.1em
+
+		+md
+			max-width: 185px
+			font-size: 10px
+
+		+smd
+			display: none
+
+		&_mob
+			display: none
+
+			+smd
+				display: flex
+				width: 100%
+				max-width: 100%
+				margin-bottom: 30px
+				+MontSemiBold
+				font-size: 16px
+				text-transform: none
+				letter-spacing: 0
+				white-space: nowrap
+
+		.icon
+			min-width: 18px
+			min-height: 18px
+			margin-right: 8px
+			fill: $golden
+
+			+ios
+				margin-bottom: 2px

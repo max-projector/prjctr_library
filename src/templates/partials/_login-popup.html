@@ -1,0 +1,30 @@
+<!-- begin login-popup -->
+
+<div class="popup js-popup" data-name="login">
+  <div class="login-popup popup__inner">
+    <button class="popup__close js-popup-close">{{ mixins.icon('close-popup') }}</button>
+
+    <div class="popup__logo logo logo_center">
+      <img class="logo__image" src="./img/logo.svg" alt="Логотип Projector"/>
+    </div>
+
+    <p class="popup__text">Войти в аккаунт</p>
+
+    <button class="popup__button popup__button_blue js-socials" type="button">
+      {{ mixins.icon('facebook') }}
+      С помощью Facebook
+    </button>
+
+    <button class="popup__button popup__button_red js-socials" type="button">
+      {{ mixins.icon('google') }}
+      С помощью Google
+    </button>
+
+    <div class="popup__checkbox-section"> 
+      <input class="popup__checkbox" id="accept" type="checkbox" name="accept" value="accept"  />
+        <label for="accept" class="popup__label" data-content="я погоджуюсь з умовами сервiсу">я погоджуюсь з <a class="link" href="https://prjctr.online/page/usage-policy.html" target="_blank" tabindex="1">умовами</a> сервiсу</label>
+    </div>
+  </div>
+</div>
+
+<!-- end login-popup -->

@@ -1,0 +1,263 @@
+.course-registration
+	background-color: #ffffff0a
+	padding: 55px 0 0px 0
+
+	a
+		background: linear-gradient(to right,#535353 0%,#2c2c2c 100%) 0 100%/1px 1px repeat-x
+		color: #7f7f7f
+
+		+hover
+			background: linear-gradient(to right,#fff 0%,#fff 100%) 0 100%/1px 1px repeat-x
+			color: #fff
+
+	&__cols_centered &__cols__col
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__cols
+		display: flex
+
+		+sm
+			flex-direction: column
+
+	&__cols_aside
+		justify-content: space-between
+
+	&__cols_2 &__cols__col:nth-child(odd)
+		padding-right: 10px
+
+		+sm
+			padding-right: 0
+
+	&__cols_2 &__cols__col
+		width: 50%
+
+		+sm
+			width: 100%
+
+	&__cols_2 &__cols__col:last-child
+		padding-top: 45px
+		padding-left: 82px
+
+		+sm
+			padding: 0
+			display: flex
+			justify-content: center
+
+	&__cols__col
+		margin-bottom: 13px
+
+	&__cols_2 &__cols__col:nth-child(odd)
+		padding-right: 41px
+
+		+sm
+			padding: 0
+
+	&__cols_aside.cols_with-title &__cols__col:nth-child(odd):not(:first-child),
+	&__cols_aside:not(.cols_with-title) &__cols__col:nth-child(even)
+		width: 34%
+		flex-shrink: 0
+		padding-top: 17px
+
+		+smd
+			padding: 0
+			align-items: center
+			display: flex
+
+		+sm
+			width: 100%
+
+	&__btn
+		display: inline-block
+		padding: 10px 27px
+		border-radius: 75px
+		color: #fff
+		background-color: $courses-brown
+		font-size: 15px
+		text-align: center
+		transition: color 0.25s, background-color 0.25s, border-color 0.25s
+
+	&__btn:hover
+		background-color: #776028
+
+	&__btn_fullwidth
+		width: 100%
+
+	&__btn,
+	.link-big
+		font-weight: 700
+		text-decoration: none
+
+	&__btn_big
+		border-radius: 56px
+		padding: 20px 46px
+
+	&__form
+		margin-top: 65px
+
+	&__form button
+		appearance: none
+		font-family: inherit
+		font-weight: 500
+		font-size: 18px
+		margin-top: -6px
+
+	&__form_last
+		margin-bottom: 60px	!important
+
+	&__form__row:not(:last-child)
+		margin-bottom: 37px
+
+	&__form__row_checkbox
+		margin-bottom: 30px
+
+	&__form__row input
+		display: block
+		width: 100%
+		font-family: inherit
+		font-size: 14px
+		border-bottom: 1px solid #535353
+		background-color: transparent
+		letter-spacing: 0.2px
+		color: $courses-white
+
+	&__form__row input:focus
+		border-bottom: 1px solid white
+		transition: .5s!important
+
+	&__form__row input:-webkit-autofill,
+	&__form__row input:-webkit-autofill:hover,
+	&__form__row input:-webkit-autofill:focus,
+	&__form__row input:-webkit-autofill:active
+		-webkit-box-shadow: 0 0 0 30px #19191d inset !important
+
+	&__form__row input:-webkit-autofill
+		-webkit-text-fill-color: #fff !important
+
+	&__cols_about &__cols__col a, &__text_blue-links a, &__text_sm a
+		color: $courses-brown
+		text-decoration: none
+
+	&__checkbox-group
+		display: flex
+		align-items: center
+
+	&__checkbox
+		position: relative
+		width: 18px
+		height: 18px
+		top: 2px
+		color: #101014
+		border: 1px solid $courses-brown
+		border-radius: 5px
+		appearance: none
+		outline: 0
+		cursor: pointer
+		letter-spacing: -0.2px
+		transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1)
+		margin-right: 4px
+
+	&__checkbox::before
+		position: absolute
+		content: ""
+		display: block
+		top: 1px
+		left: 6px
+		width: 6px
+		height: 11px
+		border-style: solid
+		border-color: #aeadad
+		border-width: 0 2px 2px 0
+		transform: rotate(45deg)
+		opacity: 0
+
+	&__checkbox:checked
+		color: #fff
+		border-color: #606065
+		background: #606065
+
+	&__checkbox:checked::before
+		opacity: 1
+
+	&__checkbox-group__checkbox
+		flex-shrink: 0
+		// margin-right: 10px
+
+	&__checkbox-group__text
+		color: #7f7f7f
+		font-size: 14px
+		letter-spacing: -0.2px
+		font-weight: 500
+
+	&__checkbox span
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		font-size: 20px
+		color: $courses-brown
+		opacity: 0
+
+	&__aside-item
+		margin-bottom: 25px
+
+		+sm
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+
+	&__nazar
+		border-radius: 20px
+		width: 72px
+		height: 72px
+
+	&__consult-section
+		display: flex
+
+	&__consult
+		font-family: "Mont Semi Bold","Arial",sans-serif
+		background-color: transparent
+		border-radius: 40px
+		border: 3px solid $courses-second-brown
+		color: #fff
+		padding: 12px 13px
+		font-weight: 500
+		font-size: 15px
+		margin-top: 23px
+		letter-spacing: 0
+
+		+sm
+			width: 100%
+
+	&__consult:hover
+		border: 3px solid #fff
+		transition: .5s!important
+
+	&__aside-item__desc
+		margin-left: 20px
+		align-self: center
+		font-weight: 500 !important
+		line-height: 22px !important
+		margin-left: 16px
+		font-weight: 600
+
+		p
+			color: $courses-light-gray
+
+        // @media only screen and (max-width: 767px) {
+        //   .cols_aside {
+        //     flex-direction: column-reverse;
+        //   }
+
+        //   .cols_2 .cols__col {
+        //     width: 100%;
+        //   }
+
+        //   .cols_aside.cols_with-title
+        //     .cols__col:nth-child(odd):not(:first-child) {
+        //     width: 100%;
+        //   }
+        // }	

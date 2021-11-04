@@ -1,0 +1,191 @@
+.course-menu
+	$this: &
+
+	z-index: 100
+	position: sticky
+	top: 75px
+	min-width: 195px
+	height: 100%
+	margin: 0 42px 0 0
+	overflow-x: hidden
+	background: $black
+
+	+md
+		margin: 0 35px 0 -15px
+
+	+smd
+		display: none
+		top: 70px
+		margin: 0 -16px
+
+	&__list
+		display: flex
+		margin-bottom: 5px
+		flex-direction: column
+
+		+smd
+			display: flex
+			justify-content: space-between
+			margin: 0 -16px 0 0
+			padding-left: 16px
+			overflow-x: auto
+
+			&::-webkit-scrollbar
+				visibility: hidden
+
+	&__point
+		display: flex
+		height: 44px
+		white-space: nowrap
+
+		&:nth-last-child(2) a, &:nth-last-child(3) a
+			color: #7f7f7f
+
+		&:nth-last-child(1) a
+			color: #8f722a
+
+		+smd
+			height: 36px
+
+		+hover
+			#{$this}__button
+				color: $white
+
+				.icon
+					fill: $white
+
+				.icon-fire
+					fill: $red
+
+		&:focus
+			outline: none
+
+			#{$this}__button
+				// border: 2px solid $golden
+				outline: none
+
+		+nofocus
+			#{$this}__button
+				border: 2px solid transparent
+
+		&.is-active
+			#{$this}__button
+				color: $white
+				background: #ffffff0d
+				// pointer-events: none
+
+				.icon
+					fill: $white
+
+				.icon-fire
+					fill: $red
+
+		&_desktop
+			+smd
+				order: -2
+
+		&_order
+			+smd
+				order: -1
+
+		&_margin
+			margin-bottom: 13px
+
+		&.is-disabled
+			#{$this}__button
+				pointer-events: none
+				color: $gray
+
+				.icon
+					fill: $gray
+
+				.icon-fire
+					fill: $red
+					opacity: 0.4
+
+			+hover
+				#{$this}__button
+					color: $gray
+
+					.icon
+						fill: $gray
+
+		&_padding
+			#{$this}__button
+				padding: 13px 16px 13px 35px
+
+				+smd
+					padding: 9px 12px 9px 31px
+
+	&__button
+		+MontBold	
+		position: relative
+		display: flex
+		cursor: pointer
+		justify-content: space-between
+		align-items: center
+		font-weight: 100
+		// width: 100%
+		padding: 21px 29px
+		font-size: 16px
+		line-height: 1.3em
+		color: $courses-light-gray
+		background: transparent
+		border-radius: 57px
+		border: 2px solid transparent
+		letter-spacing: -0.2px
+
+		+desktop-big
+			font-size: 15px
+
+		+smd
+			justify-content: center
+			padding: 9px 12px
+
+		.icon
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: 16px
+
+			+smd
+				left: 12px
+
+			+ios
+				top: calc(50% - 2px)
+
+		.icon-mark
+			width: 11px
+			height: 13px
+			fill: $light-gray
+
+		.icon-heart
+			width: 17px
+			height: 15px
+			fill: $light-gray
+			left: 14px
+
+			+smd
+				left: 12px
+
+		.icon-clock
+			width: 14px
+			height: 14px
+			fill: $light-gray
+
+		.icon-fire
+			width: 13px
+			height: 15px
+			fill: $red
+
+	&__name
+		display: flex
+		align-items: center
+		letter-spacing: 0
+
+		+md
+			line-height: 1em
+
+	&__count
+		+smd
+			display: none

@@ -1,0 +1,34 @@
+<!-- begin selected-lections -->
+
+  <section class="selected-lections">
+    <div class="selected-lections__slider swiper-container js-selected-lections-slider">
+      <div class="selected-lections__wrapper swiper-wrapper">
+        {% for item in data.sliderSelected %}
+        <div class="selected-lections__slide swiper-slide">
+          <div class="selected-lections__image">
+            <a class="selected-lections__link js-selected-lections-link" href="{{ item.link }}" tabindex="1">
+              <img src="{{ item.image }}" alt="Иконка, которая отображает суть тематики подборки"/>
+            </a>
+          </div>
+
+          <div class="selected-lections__text">
+            <span class="selected-lections__subtitle">Подборка</span>
+            <h2 class="selected-lections__title title title_smaller">
+              <a class="selected-lections__link js-selected-lections-link" href="{{ item.link }}" tabindex="1">{{ item.title | safe }}</a>
+            </h2>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="selected-lections__navigation">
+        <div class="selected-lections__prev back-button swiper-button-prev js-swiper-button-prev" tabindex="1">
+        </div>
+        <div class="selected-lections__next back-button swiper-button-next js-swiper-button-next" tabindex="1">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+<!-- end selected-lections -->

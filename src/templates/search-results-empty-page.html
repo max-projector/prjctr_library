@@ -1,0 +1,36 @@
+---
+title: Search results empty page
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Костянтин Костянтинопільський' %}
+  {% include "partials/_header.html" %}
+
+  <div class="container container_padding">
+    <h1 class="title title_padding js-main-title">Библиотека</h1>
+
+    <div class="inner js-inner">
+      {% include "partials/_search.html" %}
+
+      {% set sidebar = data.sidebarSearchEmpty %}
+      {% include "partials/_sidebar.html" %}
+
+      <main class="main" id="content">
+        <div class="search-results-empty">
+          <img class="search-results-empty__image" src="./img/empty-search-smile.svg" alt="Смайл: ничего не найдено"/>
+
+          <p class="search-results-empty__text">Такого видео у нас пока нет. Но есть <button class="search-results-empty__link link link_gold-grey" type="button"><span class="search-results-empty__count">48</span> популярных видео</button>, которые мы рекомендуем!</p>
+
+          <button class="button button_dark js-clear-button">Очистить поиск</button>
+        </div>
+      </main>
+    </div>
+  </div>
+{% endblock %}

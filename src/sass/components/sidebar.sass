@@ -1,0 +1,302 @@
+.sidebar
+	$this: &
+
+	z-index: 100
+	position: relative
+	min-width: 195px
+	height: 100%
+	margin: 0 42px 0 -15px
+	padding-top: 5px
+	overflow-x: hidden
+	background: $black
+
+	.sidebar_gift
+		+smd
+			display: none
+
+	.filter-section
+		margin-bottom: 42px
+
+		+smd
+			display: none
+
+	.filter-section.disabled
+		.option-title
+			color: #8C899A
+
+		.l-radio:hover span	
+			color: #8C899A
+
+		.l-radio:hover input
+			box-shadow: inset 0 0 0 1.5px #8C899A
+			border: 0
+
+
+
+	.option-title
+		+MontBold
+		color: white
+		font-weight: 400
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: 0.1em
+		margin-bottom: 8px
+		padding: 13px 16px
+		
+
+	.l-radio
+		width: 100%
+		display: inline-flex
+		padding: 12px 17px 11px 18px
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+		transition: background .2s ease
+		-webkit-tap-highlight-color: transparent
+
+		span
+			color: #8C899A
+
+		&:hover span
+			color: white
+
+		&:hover input
+			box-shadow: inset 0 0 0 3px #000
+			border: 1px solid #fff
+
+
+		// &:hover,
+		// &:focus-within span
+		// 	color: white
+		// 	// background: rgba($seconday,.1)
+
+		input
+			position: relative
+			top: 3px
+			left: -1px
+			width: 14px
+			height: 14px
+			border-radius: 10px
+			background: none
+			border: 0
+			box-shadow: inset 0 0 0 1.5px #8C899A
+			appearance: none
+			padding: 0
+			margin: 0
+			opacity: 1
+			pointer-events: none
+
+			&:focus
+				outline: none
+
+			&:checked
+				background: white
+				box-shadow: inset 0 0 0 3px black
+				border: 1px solid white
+
+
+	.name
+		padding: 0 8px 0px 1px
+		color: white
+
+	+md
+		margin: 0 35px 0 -15px
+
+	+smd
+		top: 70px
+		margin: 0 -16px
+
+	&__list
+		display: block
+		margin-bottom: 5px
+		margin-bottom: 16px
+
+		+smd
+			display: flex
+			justify-content: space-between
+			margin: 0 -16px 0 0
+			padding-left: 16px
+			overflow-x: auto
+
+			&::-webkit-scrollbar
+				visibility: hidden
+
+	&__point
+		display: flex
+		height: 44px
+		white-space: nowrap
+
+		+smd
+			height: 36px
+
+		+hover
+			#{$this}__button
+				color: $white
+
+				.icon
+					fill: $white
+
+				.icon-fire
+					fill: $red
+
+				.icon-guest
+					fill: #8C899A
+
+				.icon-restream_icon
+					// background: #FF6633
+					border-radius: 50px
+					fill: white
+
+				// .icon-bookmark-grey
+				// 	background: #FF6633
+				// 	border-radius: 50px
+				// 	fill: white	
+
+		&:focus
+			outline: none
+
+			#{$this}__button
+				border: 2px solid $golden
+				outline: none
+
+		+nofocus
+			#{$this}__button
+				border: 2px solid transparent
+
+		&.is-active
+			#{$this}__button
+				color: $white
+				background: $dark-gray
+				pointer-events: none
+
+				.icon
+					fill: $white
+
+				.icon-fire
+					fill: $red
+
+		&_desktop
+			+smd
+				order: -2
+
+		&_order
+			+smd
+				order: -1
+
+		&_margin
+			margin-bottom: 25px
+
+		&.is-disabled
+			#{$this}__button
+				pointer-events: none
+				color: $gray
+
+				.icon
+					fill: $gray
+
+				.icon-fire
+					fill: $red
+					opacity: 0.4
+
+			+hover
+				#{$this}__button
+					color: $gray
+
+					.icon
+						fill: $gray
+
+		&_padding
+			#{$this}__button
+				padding: 13px 16px 13px 35px
+
+				+smd
+					padding: 9px 12px 9px 31px
+
+	&__button
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding: 13px 16px
+		+MontSemiBold
+		font-size: 16px
+		line-height: 1.3em
+		color: $light-gray
+		background: transparent
+		border-radius: 100px
+		border: 2px solid transparent
+
+		+desktop-big
+			font-size: 14px
+
+		+smd
+			justify-content: center
+			padding: 9px 12px
+
+		.icon
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: 16px
+
+			+smd
+				left: 12px
+
+			+ios
+				top: calc(50% - 2px)
+
+		.icon-mark
+			width: 11px
+			height: 13px
+			fill: $light-gray
+
+		.icon-heart
+			width: 17px
+			height: 15px
+			fill: $light-gray
+			left: 14px
+
+			+smd
+				left: 12px
+
+		.icon-clock
+			width: 14px
+			height: 14px
+			fill: $light-gray
+
+		.icon-bookmark-grey
+			width: 14px
+			height: 14px
+			fill: $light-gray	
+
+		.icon-fire
+			width: 13px
+			height: 15px
+			fill: $red
+
+		.icon-restream_icon
+			width: 15px
+			height: 15px
+			fill: white
+			background: #FF6633
+			border-radius: 50px
+
+		.icon-guest
+			width: 13px
+			height: 15px
+			fill: #8C899A
+
+	&__name
+		display: flex
+		align-items: center
+
+		+md
+			line-height: 1em
+
+	&__count-off
+		display: none
+
+	&__count
+		+smd
+			display: none

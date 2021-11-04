@@ -1,0 +1,1856 @@
+{% set
+menu = [
+  {
+    mod: "js-menu-point-with-sublist",
+    name: "Освіта",
+    include: true,
+    list: [
+      {
+        image: './img/study-image.jpg',
+        alt: "Освіта",
+        name: "Онлайн-курси",
+        subtext: "для розвитку в професії",
+        link: "#"
+      },
+      {
+        name: "Гуманітаріум",
+        link: "#"
+      },
+      {
+        name: "Курси для школярів",
+        link: "#"
+      }
+    ]
+  },
+  {
+    mod: "js-menu-point-with-sublist",
+    name: "Події",
+    include: true,
+    list: [
+      {
+        image: './img/events-image.jpg',
+        alt: "Події",
+        name: "Whatabout",
+        subtext: "global creative community",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        name: "Kruрa",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        name: "OFFF Kyiv",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        name: "Воркшопи і лекції",
+        link: "#"
+      }
+    ]
+  },
+  {
+    mod: "is-active js-menu-point",
+    name: "Бібліотека",
+    link: "main-page-unlogged.html"
+  },
+  {
+    mod: "js-menu-point-with-sublist",
+    name: "Медіа",
+    include: true,
+    list: [
+      {
+        image: "./img/events-image.jpg",
+        alt: "Медіа",
+        name: "Telegraf",
+        subtext: "провідне українське дизайн-медіа",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        name: "Рrjctr Mag",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        name: "Youtube",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        icon: "facebook",
+        name: "Новини, роботи, люди",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        icon: "telegram",
+        name: "Вакансії та анонси",
+        link: "#",
+        arrow: "true"
+      },
+      {
+        icon: "instagram",
+        name: "Візуальне життя школи ",
+        link: "#",
+        arrow: "true"
+      }
+    ]
+  },
+  {
+    mod: "js-menu-point-with-sublist",
+    name: "Ми",
+    include: true,
+    list: [
+      {
+        image: "./img/we-image.jpg",
+        alt: "Ми",
+        name: "Про Рrojector",
+        subtext: "історія і головні ідеї школи",
+        link: "#"
+      },
+      {
+        name: "Люди",
+        link: "#"
+      },
+      {
+        name: "Співпраця",
+        link: "#"
+      },
+      {
+        name: "Контакти",
+        link: "#"
+      }
+    ]
+  }
+]
+%}
+
+{% set
+languages = [
+  {
+    name: "RU",
+    link: "#"
+  },
+  {
+    name: "ENG",
+    link: "#"
+  }
+]
+%}
+
+{% set
+  sidebarVideoFormat = [
+    {
+      id: "all",
+      name: "Всі",
+      count: "22"
+    },
+    {
+      id: "lections",
+      name: "Відеолекції",
+      count: "22"
+    },
+    {
+      id: "conf",
+      name: "Конференції",
+      count: "22"
+    },
+    {
+      id: "playlist",
+      name: "Плейлисти",
+      count: "22"
+    },
+    {
+      id: "courses",
+      name: "Відеокурси",
+      count: "2289"
+    }
+    ]
+%}    
+
+{% set
+  sidebarVideoDirection = [
+    {
+      id: "all",
+      name: "Всі",
+      count: "22"
+    },
+    {
+      id: "devDS",
+      name: "Dev & DS",
+      count: "22"
+    },
+    {
+      id: "graphics",
+      name: "Graphics",
+      count: "22"
+    },
+    {
+      id: "interface-design",
+      name: "Interface Design",
+      count: "22"
+    },
+    {
+      id: "management",
+      name: "Management",
+      count: "2289"
+    },
+    {
+      id: "marketing",
+      name: "Marketing",
+      count: "2289"
+    },
+    {
+      id: "creativea-ads",
+      name: "Creative Ads",
+      count: "2289"
+    }
+    ]
+%}    
+
+{% set
+  sidebarVideoLevel = [
+    {
+      id: "all",
+      name: "Будь-який",
+      count: "22"
+    },
+    {
+      id: "jun",
+      name: "Початківцям",
+      count: "22"
+    },
+    {
+      id: "pro",
+      name: "Спеціалістам",
+      count: "22"
+    }
+    ]
+%} 
+
+{% set
+sidebar = [
+  {
+    id: "all",
+    mod: "sidebar__point_desktop",
+    name: "Все темы",
+    count: "241"
+  },
+  {
+    id: "conferences",
+    mod: "sidebar__point_desktop is-active count-off sidebar__point_margin",
+    name: "Конференції",
+    count: "0"
+  },
+  {
+    id: "selected",
+    icon: "bookmark-grey",
+    name: "Избранные",
+    count: "22",
+    mod: "sidebar__point_padding"
+  },
+  {
+    id: "history",
+    icon: "clock",
+    name: "История",
+    count: "9",
+    mod: "sidebar__point_order sidebar__point_padding"
+  },
+  {
+    id: "popular",
+    icon: "fire",
+    name: "Популярное",
+    count: "26",
+    mod: "sidebar__point_padding"
+  },
+  {
+    id: "restream",
+    icon: "restream_icon",
+    name: "Restream",
+    count: "20",
+    mod: "sidebar__point_padding"
+  },
+  {
+    id: "guest",
+    icon: "guest",
+    name: "Для гостей",
+    count: "29",
+    mod: "sidebar__point_margin sidebar__point_padding"
+  }
+]
+%}
+
+{% set
+sidebarHistory = [
+  {
+    icon: "mark",
+    name: "Избранные111",
+    count: "22",
+    mod: "sidebar__point_padding"
+  },
+  {
+    icon: "clock",
+    name: "История",
+    count: "9",
+    mod: "sidebar__point_order sidebar__point_padding is-active"
+  },
+  {
+    icon: "fire",
+    name: "Популярное",
+    count: "26",
+    mod: "sidebar__point_margin sidebar__point_padding"
+  },
+  {
+    mod: "sidebar__point_desktop",
+    name: "Все темы",
+    count: "241"
+  },
+  {
+    name: "Interfaces",
+    count: "76"
+  },
+  {
+    name: "Graphics",
+    count: "22"
+  },
+  {
+    name: "Development",
+    count: "19"
+  },
+  {
+    name: "Management",
+    count: "38"
+  },
+  {
+    name: "Marketing",
+    count: "51"
+  },
+  {
+    name: "Animation",
+    count: "8"
+  }
+]
+%}
+
+{% set
+sidebarOtherTheme = [
+  {
+    icon: "mark",
+    name: "Избранные6666",
+    count: "22",
+    mod: "sidebar__point_padding"
+  },
+  {
+    mod: "sidebar__point_order sidebar__point_padding",
+    icon: "clock",
+    name: "История",
+    count: "9"
+  },
+  {
+    icon: "fire",
+    name: "Популярное",
+    count: "26",
+    mod: "sidebar__point_margin sidebar__point_padding"
+  },
+  {
+    mod: "sidebar__point_desktop",
+    name: "Все темы",
+    count: "241"
+  },
+  {
+    name: "Interfaces",
+    count: "76"
+  },
+  {
+    name: "Graphics",
+    count: "22"
+  },
+  {
+    name: "Development",
+    count: "19"
+  },
+  {
+    mod: "is-active",
+    name: "Management",
+    count: "38"
+  },
+  {
+    name: "Marketing",
+    count: "51"
+  },
+  {
+    name: "Animation",
+    count: "8"
+  }
+]
+%}
+
+{% set
+sidebarSearchEmpty = [
+  {
+    mod: "is-disabled sidebar__point_padding",
+    icon: "mark",
+    name: "Избранные888"
+  },
+  {
+    mod: "is-disabled sidebar__point_padding",
+    icon: "clock",
+    name: "История"
+  },
+  {
+    mod: "is-disabled sidebar__point_margin sidebar__point_padding",
+    icon: "fire",
+    name: "Популярное"
+  },
+  {
+    mod: "sidebar__point_desktop is-disabled is-active",
+    name: "Все темы"
+  },
+  {
+    mod: "is-disabled",
+    name: "Interfaces"
+  },
+  {
+    mod: "is-disabled",
+    name: "Graphics"
+  },
+  {
+    mod: "is-disabled",
+    name: "Development"
+  },
+  {
+    mod: "is-disabled",
+    name: "Management"
+  },
+  {
+    mod: "is-disabled",
+    name: "Marketing"
+  },
+  {
+    mod: "is-disabled",
+    name: "Animation"
+  }
+]
+%}
+
+{% set
+  mainPagePlaylistsTwice = [
+  {
+    cardMod: "big",
+    view: "playlist",
+    count: 4,
+    image: "./img/playlist_2.png",
+    imageRetina: "./img/playlist_2.png",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Плейліст",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "big",
+    view: "playlist",
+    count: 4,
+    image: "./img/playlist_1.png",
+    imageRetina: "./img/playlist_1.png",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Плейліст",
+    speakerLink: "#",
+    link: "#"
+  }
+  ]
+  %}
+
+{% set
+  mainPagePlaylists = [
+    {
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_2.png",
+      imageRetina: "./img/playlist_2.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+  
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_1.png",
+      imageRetina: "./img/playlist_1.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_1.png",
+      imageRetina: "./img/playlist_1.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_1.png",
+      imageRetina: "./img/playlist_1.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_1.png",
+      imageRetina: "./img/playlist_1.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      view: "playlist",
+      count: 4,
+      image: "./img/playlist_1.png",
+      imageRetina: "./img/playlist_1.png",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Плейліст",
+      speakerLink: "#",
+      link: "#"
+    }
+]
+%}
+
+{% set
+mainPageBigCards = [
+  {
+    cardMod: "big",
+    watched: "true",
+    image: "./img/big-card-1.jpg",
+    imageRetina: "./img/big-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "big",
+    new: "true",
+    image: "./img/big-card-2.jpg",
+    imageRetina: "./img/big-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    mod: "cards-block__item_visibility",
+    cardMod: "big",
+    new: "true",
+    image: "./img/big-card-2.jpg",
+    imageRetina: "./img/big-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  }
+]
+%}
+
+{% set
+  mainPageDefaultCases = [
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-dcf1d32f-ae3c-4df7-b6bd-1ce4b08a19e9.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-dcf1d32f-ae3c-4df7-b6bd-1ce4b08a19e9.png",
+      category: "Management",
+      text: "UX кейс для Uklon.ua",
+      student: "Iнна Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/play-btn.svg",
+      video: "true"
+    },
+
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-1d5f30a0-e3ec-41df-b25d-1cfc84f089ed.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-1d5f30a0-e3ec-41df-b25d-1cfc84f089ed.png",
+      category: "Management",
+      text: "UX кейс для Uklon.ua",
+      student: "Iнна Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/file.svg",
+      file: "true"
+    },
+
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-7f5c4073-66b6-49bd-954e-9d000dafb8b1.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-7f5c4073-66b6-49bd-954e-9d000dafb8b1.png",
+      category: "Management",
+      text: "UX кейс для Uklon.ua",
+      student: "Iнна Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/gallery.svg",
+      gallery: "true"
+    },
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-f2d49ec1-8336-41e4-9ca8-6cb39f2589e7.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-f2d49ec1-8336-41e4-9ca8-6cb39f2589e7.png",
+      category: "Management",
+      text: "UX кейс для LUN.ua",
+      student: "Саша Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/play-btn.svg",
+      gallery: "true"
+    },
+
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-dcf1d32f-ae3c-4df7-b6bd-1ce4b08a19e9.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-dcf1d32f-ae3c-4df7-b6bd-1ce4b08a19e9.png",
+      category: "Management",
+      text: "UX кейс для Uklon.ua",
+      student: "Iнна Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/play-btn.svg",
+      gallery: "true"
+    },
+
+    {
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-1d5f30a0-e3ec-41df-b25d-1cfc84f089ed.png",
+      imageRetina: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-1d5f30a0-e3ec-41df-b25d-1cfc84f089ed.png",
+      category: "Management",
+      text: "UX кейс для Uklon.ua",
+      student: "Iнна Мірошнік",
+      link: "#",
+      studentLink: "#",
+      imgType: "./icons/play-btn.svg",
+      galery: "true"
+    }
+
+  ]
+    %}
+
+{% set
+mainPageDefaultCards = [
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    new: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    new: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    mod: "cards-block__item_visibility",
+    new: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+
+
+{% set
+  mainPageSliderFeedback = [
+  {
+    watched: "true",
+    image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+    speaker: "Ольга Шевченко",
+    text: "UX кейс для Uklon.ua",
+    role: "PRODUCT DESIGNER В IDAP",
+    text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+    що він буде корисний всім без винятку, не лише дизайнерам. Крім
+    роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+    друзів — і це не бугагашки про «в мене більше нема друзів і я
+    постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+    все тепер має цінність, вагу, структуру. Жити стало важче, але
+    набагато крутіше!)))",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+    text: "UX кейс для Uklon.ua",
+    speaker: "Маша Шевченко",
+    role: "PRODUCT DESIGNER AT ZEO ALLIANCE",
+    text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+    що він буде корисний всім без винятку, не лише дизайнерам. Крім
+    роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+    друзів — і це не бугагашки про «в мене більше нема друзів і я
+    постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+    все тепер має цінність, вагу, структуру. Жити стало важче, але
+    набагато крутіше!)))",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+    speaker: "Ольга Шевченко",
+    text: "UX кейс для Uklon.ua",
+    role: "PRODUCT DESIGNER В IDAP",
+    text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+    що він буде корисний всім без винятку, не лише дизайнерам. Крім
+    роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+    друзів — і це не бугагашки про «в мене більше нема друзів і я
+    постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+    все тепер має цінність, вагу, структуру. Жити стало важче, але
+    набагато крутіше!)))",
+    link: "#",
+    speakerLink: "#"
+  },
+  
+  {
+    watched: "true",
+    image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+    speaker: "Ольга Шевченко",
+    text: "UX кейс для Uklon.ua",
+    role: "PRODUCT DESIGNER В IDAP",
+    text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+    що він буде корисний всім без винятку, не лише дизайнерам. Крім
+    роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+    друзів — і це не бугагашки про «в мене більше нема друзів і я
+    постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+    все тепер має цінність, вагу, структуру. Жити стало важче, але
+    набагато крутіше!)))",
+    link: "#",
+    speakerLink: "#"
+  },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+      speaker: "Ольга Шевченко",
+      text: "UX кейс для Uklon.ua",
+      role: "PRODUCT DESIGNER В IDAP",
+      text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+      що він буде корисний всім без винятку, не лише дизайнерам. Крім
+      роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+      друзів — і це не бугагашки про «в мене більше нема друзів і я
+      постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+      все тепер має цінність, вагу, структуру. Жити стало важче, але
+      набагато крутіше!)))",
+      link: "#",
+      speakerLink: "#"
+    },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+      speaker: "Ольга Шевченко",
+      text: "UX кейс для Uklon.ua",
+      role: "PRODUCT DESIGNER В IDAP",
+      text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+      що він буде корисний всім без винятку, не лише дизайнерам. Крім
+      роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+      друзів — і це не бугагашки про «в мене більше нема друзів і я
+      постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+      все тепер має цінність, вагу, структуру. Жити стало важче, але
+      набагато крутіше!)))",
+      link: "#",
+      speakerLink: "#"
+    },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-cd78d3c5-7f5e-4024-bcf4-8e3cf705fc50.png",
+      speaker: "Ольга Шевченко",
+      text: "UX кейс для Uklon.ua",
+      role: "PRODUCT DESIGNER В IDAP",
+      text: "Курс змінив і продовжує змінювати моє життя. Мені взагалі здається,
+      що він буде корисний всім без винятку, не лише дизайнерам. Крім
+      роботи і навчання, змінилися мій побут, дозвілля, світогляд, коло
+      друзів — і це не бугагашки про «в мене більше нема друзів і я
+      постаріла на 15 років за 5 місяців». Це все змінилось в кращий бік —
+      все тепер має цінність, вагу, структуру. Жити стало важче, але
+      набагато крутіше!)))",
+      link: "#",
+      speakerLink: "#"
+    }
+  ]
+  %}
+
+  {% set
+    mainPageSliderMentors = [
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-173e8594-af91-4ff4-9a83-53c0d1376ecc.png?w=580&e=webp&nll=true&cX=138&cY=0&cW=409&cH=630",
+      company_logo: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-d8b417e7-8ccb-46be-aa40-359b38714cc2.png?w=176&e=webp&nll=true",
+      speaker: "Андрей Шевченко",
+      text: "Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для",
+      role: "Ментор групи а"
+    },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-173e8594-af91-4ff4-9a83-53c0d1376ecc.png?w=580&e=webp&nll=true&cX=138&cY=0&cW=409&cH=630",
+      company_logo: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-d8b417e7-8ccb-46be-aa40-359b38714cc2.png?w=176&e=webp&nll=true",
+      speaker: "Андрей Шевченко",
+      text: "Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии.",
+      role: "Ментор групи а"
+    },
+        {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-173e8594-af91-4ff4-9a83-53c0d1376ecc.png?w=580&e=webp&nll=true&cX=138&cY=0&cW=409&cH=630",
+      company_logo: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-d8b417e7-8ccb-46be-aa40-359b38714cc2.png?w=176&e=webp&nll=true",
+      speaker: "Андрей Шевченко",
+      text: "Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии.",
+      role: "Ментор групи а"
+    },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-29831627-f5b5-4850-bef9-b86f76fc2c89.png?e=webp&nll=true&cX=38&cY=0&cW=417&cH=640",
+      company_logo: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-d8b417e7-8ccb-46be-aa40-359b38714cc2.png?w=176&e=webp&nll=true",
+      speaker: "Андрей Велес",
+      text: "Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии.",
+      role: "Куратор"
+    },
+    {
+      watched: "true",
+      image: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-29831627-f5b5-4850-bef9-b86f76fc2c89.png?e=webp&nll=true&cX=38&cY=0&cW=417&cH=640",
+      company_logo: "https://d2kq0urxkarztv.cloudfront.net/52610615b263af5f64000ad9/2439930/upload-d8b417e7-8ccb-46be-aa40-359b38714cc2.png?w=176&e=webp&nll=true",
+      speaker: "Андрей Велес",
+      text: "Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии. Это практичный онлайн-курс об основах веб-дизайна для новичков, которые еще не имеют опыта и хотят попробовать себя в новой профессии.",
+      role: "Куратор"
+    }
+    ]
+    %}
+  
+
+
+
+{% set
+mainPageSliderPopular = [
+  {
+    watched: "true",
+    image: "./img/big-trending-card-1.jpg",
+    imageRetina: "./img/big-trending-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/big-trending-card-2.jpg",
+    imageRetina: "./img/big-trending-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/big-trending-card-3.jpg",
+    imageRetina: "./img/big-trending-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/big-trending-card-1.jpg",
+    imageRetina: "./img/big-trending-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/big-trending-card-2.jpg",
+    imageRetina: "./img/big-trending-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/big-trending-card-3.jpg",
+    imageRetina: "./img/big-trending-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/big-trending-card-1.jpg",
+    imageRetina: "./img/big-trending-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/big-trending-card-2.jpg",
+    imageRetina: "./img/big-trending-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/big-trending-card-3.jpg",
+    imageRetina: "./img/big-trending-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/big-trending-card-1.jpg",
+    imageRetina: "./img/big-trending-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/big-trending-card-2.jpg",
+    imageRetina: "./img/big-trending-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/big-trending-card-3.jpg",
+    imageRetina: "./img/big-trending-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+{% set
+mainPageHugeCard = [
+  {
+    watched: "true",
+    image: "./img/huge-card-1.jpg",
+    imageRetina: "./img/huge-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+{% set
+mainPageDefaultCards2 = [
+  {
+    image: "./img/big-card-1.jpg",
+    imageRetina: "./img/big-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/default-card-4.jpg",
+    imageRetina: "./img/default-card-4@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-5.jpg",
+    imageRetina: "./img/default-card-5@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+{% set
+sliderSelected = [
+  {
+    image: "./img/collection_dev.png",
+    title: "<span>47</span> видео о разработке и технологиях",
+    link: "#"
+  },
+ {
+    image: "./img/collection_ux.png",
+    title: "<span>N</span> лекций об интерфейсах и UX",
+    link: "#"
+  },
+  {
+    image: "./img/collection_graf.png",
+    title: "<span>N</span> видео для графических дизайнеров",
+    link: "#"
+  },
+  {
+    image: "./img/collection_mrkt.png",
+    title: "Цифровой маркетинг в <span>N</span> видео-лекциях",
+    link: "#"
+  },
+  {
+    image: "./img/collection_mgmt.png",
+    title: "Управление продуктом и командой: <span>N</span> видео",
+    link: "#"
+  }
+]
+%}
+
+{% set
+mainPageBigCards2 = [
+  {
+    cardMod: "big",
+    image: "./img/big-card-3.jpg",
+    imageRetina: "./img/big-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "big",
+    image: "./img/big-card-4.jpg",
+    imageRetina: "./img/big-card-4@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  }
+]
+%}
+
+{% set
+mainPageDefaultCards3 = [
+  {
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    image: "./img/default-card-4.jpg",
+    imageRetina: "./img/default-card-4@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-5.jpg",
+    imageRetina: "./img/default-card-5@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-8.jpg",
+    imageRetina: "./img/default-card-8@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    popular: "true",
+    image: "./img/default-card-9.jpg",
+    imageRetina: "./img/default-card-9@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст популярного видео, в нём есть иконка с огоньком",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    image: "./img/default-card-10.jpg",
+    imageRetina: "./img/default-card-10@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+
+{% set
+  mainPageDefaultCards4 = [
+    {
+      image: "./img/conf.png",
+      imageRetina: "./img/conf.png",
+      year: "3,8 травня, 22 червня",
+      category: "Конференція",
+      text: "Product Management Conference",
+      speaker: "14 спікерів",
+      link: "#",
+      speakerLink: "#"
+    },
+   {
+    image: "./img/conf.png",
+    imageRetina: "./img/conf.png",
+      year: "3,8 травня, 22 червня",
+      category: "Конференція",
+      text: "Product Management Conference",
+      speaker: "14 спікерів",
+      link: "#",
+      speakerLink: "#"
+    },
+    {
+      image: "./img/conf.png",
+      imageRetina: "./img/conf.png",
+      year: "3,8 травня, 22 червня",
+      category: "Конференція",
+      text: "Product Management Conference",
+      speaker: "14 спікерів",
+      link: "#",
+      speakerLink: "#"
+    }
+  ]
+  %}
+
+{% set
+historyPageDefaultCards = [
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+ {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+{% set
+otherThemePageBigCards = [
+  {
+    cardMod: "big",
+    watched: "true",
+    image: "./img/big-card-1.jpg",
+    imageRetina: "./img/big-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "big",
+    watched: "true",
+    image: "./img/big-card-2.jpg",
+    imageRetina: "./img/big-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  }
+]
+%}
+
+{% set
+  relativeCardToVideo = [
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-1.jpg",
+      imageRetina: "./img/big-card-1@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#",
+      active: "true"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-2.jpg",
+      imageRetina: "./img/big-card-2@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-1.jpg",
+      imageRetina: "./img/big-card-1@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-2.jpg",
+      imageRetina: "./img/big-card-2@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-1.jpg",
+      imageRetina: "./img/big-card-1@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-2.jpg",
+      imageRetina: "./img/big-card-2@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-1.jpg",
+      imageRetina: "./img/big-card-1@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-2.jpg",
+      imageRetina: "./img/big-card-2@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-1.jpg",
+      imageRetina: "./img/big-card-1@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    },
+    {
+      cardMod: "relative",
+      watched: "true",
+      image: "./img/big-card-2.jpg",
+      imageRetina: "./img/big-card-2@2x.jpg",
+      year: "2020",
+      category: "Management",
+      duration: "04:32",
+      text: "Длинный текст, посвящённый этой видеолекции, который донесёт основной смысл читателю",
+      speaker: "Ольга Шевченко, Vintage",
+      speakerLink: "#",
+      link: "#"
+    }
+  ]
+  %}
+
+{% set
+otherThemePageDefaultCards = [
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-1.jpg",
+    imageRetina: "./img/default-card-1@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-2.jpg",
+    imageRetina: "./img/default-card-2@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  },
+  {
+    watched: "true",
+    image: "./img/default-card-3.jpg",
+    imageRetina: "./img/default-card-3@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Текст, посвящённый этой лекции",
+    speaker: "Ольга Шевченко, Vintage",
+    link: "#",
+    speakerLink: "#"
+  }
+]
+%}
+
+{% set
+middleCards = [
+  {
+    cardMod: "middle",
+    image: "./img/default-card-8.jpg",
+    imageRetina: "./img/default-card-8@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Проектирование клиентского опыта",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "middle",
+    popular: "true",
+    image: "./img/default-card-6.jpg",
+    imageRetina: "./img/default-card-6@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Анимация персонажа в Рrinciрle",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  },
+  {
+    cardMod: "middle",
+    popular: "true",
+    image: "./img/default-card-7.jpg",
+    imageRetina: "./img/default-card-7@2x.jpg",
+    year: "2020",
+    category: "Management",
+    duration: "04:32",
+    text: "Какие скиллы нужны для профессионального роста в UI/UX?",
+    speaker: "Ольга Шевченко, Vintage",
+    speakerLink: "#",
+    link: "#"
+  }
+]
+%}
+
+{% set
+socials = [
+  {
+    icon: "facebook-circle",
+    info: "Поделиться в Facebook"
+  },
+  {
+    icon: "twitter",
+    info: "Поделиться в Twitter"
+  },
+  {
+    icon: "copy-link",
+    info: "Скопировать ссылку"
+  }
+]
+%}
+
+{% set
+tags = [
+  {
+    link: "main-page-logged-in.html",
+    name: "АНИМАЦИЯ"
+  },
+  {
+    link: "main-page-logged-in.html",
+    name: "РRINCIРLE"
+  },
+  {
+    link: "main-page-logged-in.html",
+    name: "МОУШН"
+  },
+    {
+    link: "main-page-logged-in.html",
+    name: "ПЕРСОНАЖИ"
+  }
+]
+%}

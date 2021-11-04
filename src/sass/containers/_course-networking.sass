@@ -1,0 +1,66 @@
+.course-networking
+	&__cols
+		display: flex
+		flex-wrap: wrap
+		margin-top: 50px
+
+	&__cols_centered &__cols__col
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__cols_divided &__cols__col
+		position: relative
+		margin-bottom: 0
+
+	&__cols_4 &__cols__col
+		width: 25%
+
+		+sm
+			width: 50%
+
+	&__cols__col
+		margin-bottom: 50px
+
+	&__partner
+		text-align: center
+		position: relative
+		padding-top: 20px
+		padding-bottom: 40px
+		margin-left: auto
+		margin-right: auto
+
+		+sm
+			width: 100%
+
+	&__partner_logo-only
+		padding-bottom: 20px
+
+	&__partner_logo-only &__partner__logo
+		height: auto
+		margin-bottom: 0
+
+	&__partner__logo
+		height: 50px
+		margin-bottom: 30px
+
+	&__partner__logo img
+		max-width: 100%
+		max-height: 100%
+
+	&__cols_divided &__cols__col::after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 1px
+		background-color: #242424
+
+	&__cols_divided &__cols__col:nth-child(4n):after
+		display: none
+
+	&__cols_divided &__cols__col:nth-child(2n):after
+		+sm
+			display: none

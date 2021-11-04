@@ -1,0 +1,124 @@
+.selected-lections
+	position: relative
+	padding: 32px 0 120px
+	overflow-x: hidden
+
+	&__slider
+		width: 100%
+		max-width: 1286px
+		height: auto
+
+		+desktop-big
+			max-width: 856px
+
+		+md
+			max-width: 100%
+
+	&__slide
+		z-index: 100
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		max-width: 1286px
+
+		+desktop-big
+			max-width: 856px
+
+		+md
+			flex-direction: column
+			max-width: 100%
+
+	&__image
+		overflow: hidden
+		width: 190px
+		height: 190px
+		margin-right: 32px
+		border-radius: 50%
+		background: $golden
+
+		+md
+			width: 104px
+			height: 104px
+			margin: 0 0 32px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__link
+		width: 100%
+		height: 100%
+		color: $white
+
+	&__text
+		width: 477px
+
+		+md
+			width: 100%
+			text-align: center
+
+	&__subtitle
+		margin-bottom: 18px
+		+MontBold
+		font-size: 12px
+		line-height: 1.5em
+		color: $golden
+		text-transform: uppercase
+		letter-spacing: 0.1em
+
+	&__navigation
+		position: absolute
+		width: 100%
+		height: 48px
+		top: 50%
+		margin-top: -1.7em
+
+		+md
+			display: none
+
+	&__prev,
+	&__next
+		z-index: 120
+
+		&:focus
+			outline: 2px solid $golden
+
+		+nofocus
+			outline: none
+
+	.swiper-container
+		margin-left: 0
+		margin-right: 0
+
+	.swiper-button-prev,
+	.swiper-button-next
+		opacity: 1
+
+		&::after
+			font-size: 12px
+			color: $white
+
+	.swiper-pagination
+		visibility: hidden
+		bottom: 72px
+		left: 50%
+		transform: translate(-50%, 0)
+		height: 20px
+
+		+md
+			visibility: visible
+
+	.swiper-pagination-bullet
+		width: 8px
+		height: 8px
+		margin-right: 8px
+		background: $golden
+		opacity: 0.4
+
+		&:last-of-type
+			margin-right: 0
+
+	.swiper-pagination-bullet-active
+		opacity: 1

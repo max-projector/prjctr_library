@@ -1,0 +1,224 @@
+---
+title: Other theme page
+---
+
+{% import "data/data.html" as data %} {% import "partials/_mixins.html" as
+mixins %} {% extends "layouts/_layout.html" %} {% block content %} {% set login
+= 'Костянтин Костянтинопільський' %} {% include "partials/_header.html" %}
+
+<div class="container container_padding">
+  <h1 class="title title_padding account__title js-main-title">
+    Nastia Anikanova
+  </h1>
+
+  <main id="content">
+    <div class="inner js-inner">
+      <div class="account__wrapper">
+        <input
+          class="account__radio"
+          id="one"
+          name="group"
+          type="radio"
+          checked
+        />
+        <input class="account__radio" id="two" name="group" type="radio" />
+        <input class="account__radio" id="three" name="group" type="radio" />
+        <div class="account__tabs">
+          <label class="account__tab" id="one-tab" for="one">Підписка</label>
+          <label class="account__tab" id="two-tab" for="two">Аккаунт</label>
+          <label class="account__tab" id="three-tab">Вийти</label>
+        </div>
+        <div class="account__panels">
+          <div class="account__panel" id="first-panel">
+            <!-- active -->
+            <div class="account__subcription">
+              <div>
+                <span class="account__subcription-status">Активна</span>
+
+                <h4>Підписка Projector Library</h4>
+
+                <p>
+                  Наступний платіж відбудеться 4 березня, 2022. Платіжна карта
+                  Visa **** **** **** 2651.
+                </p>
+
+                <button
+                  class="js-open-popup-button account__subcription-cancel"
+                  type="button"
+                  data-popup="cancel-subscription-request"
+                >
+                  <span class="">Скасувати автоматичне продовження</span>
+                </button>
+              </div>
+
+              <img
+                src="./img/notebook.png"
+                class="account__subcription-notebook"
+              />
+            </div>
+            <!-- active -->
+
+            <!-- was active -->
+            <div class="account__subcription">
+              <div>
+                <span class="account__subcription-status"
+                  >Підписка діє до 4 березня, 2022.
+                </span>
+                <h4>Підписка Projector Library</h4>
+                <p>
+                  Ми скасували автопродовження підписки, але залишили доступ для
+                  всіх лекцій та конференцій.
+                </p>
+              </div>
+
+              <img
+                src="./img/notebook.png"
+                class="account__subcription-notebook"
+              />
+            </div>
+            <!-- was active -->
+
+            <!-- was need to subcribe -->
+            <div class="account__subcription">
+              <div>
+                <h4>
+                  Одна підписка на все — <br />онлайн-конференції та тематичні
+                  відеолекції
+                </h4>
+
+                <p>
+                  Крутий контент на найближчі 12 місяців? Done. Отримуйте доступ
+                  до нашої бази відеолекцій, а також до всіх запланованих та вже
+                  минулих онлайн-конференцій. Доступ оновлюється щороку
+                  автоматично.
+                </p>
+
+                <div class="account__btncontainer">
+                  <button
+                    class="button js-open-popup-button"
+                    type="button"
+                    data-popup="subscribe"
+                  >
+                    <span> Придбати підписку </span>
+                  </button>
+                  <span class="account__price">за 950 ₴ на рік</span>
+                </div>
+              </div>
+
+              <img
+                src="./img/notebook.png"
+                class="account__subcription-notebook"
+              />
+            </div>
+            <!-- was need to subcribe -->
+
+            <div class="account__gift">
+              <div>
+                <h4>Подаруйте підписку тим, хто в темі</h4>
+
+                <p>
+                  Ви платите один раз — і забезпечуєте близьку людину контентом
+                  на один рік. Подарована підписка не буде оновлюватися щороку,
+                  а активувати сертифікат та запустити доступ можливо в
+                  будь-який час.
+                </p>
+
+                <button
+                  class="button js-open-popup-button"
+                  data-popup="gift-request"
+                >
+                  <a class="button__link" href="#" tabindex="1"
+                    >Подарувати доступ на рік</a
+                  >
+                </button>
+              </div>
+              <img
+                src="./img/presents.png"
+                class="account__subcription-present"
+              />
+            </div>
+            <p class="account__support-text">
+              Щось не працює? Напиши нашій
+              <a href="mailto:name@email.com">службі підтримки</a>
+            </p>
+          </div>
+          <div class="account__panel" id="second-panel">
+            <form class="account__form" method="post" novalidate>
+              <input type="hidden" name="request[id]" value="2434" />
+
+              <div class="account__form-tab">
+                <span>Прізвище</span>
+
+                <input
+                  type="text"
+                  id="request-lastname-gift"
+                  name="request[lastname]"
+                  aria-label="Прізвище"
+                  tabindex="1"
+                />
+              </div>
+
+              <div class="account__form-tab">
+                <span>Ім’я</span>
+                <input
+                  type="text"
+                  id="request-name-gift"
+                  name="request[firstname]"
+                  aria-label="Ім’я"
+                  tabindex="1"
+                />
+              </div>
+
+              <div class="account__form-tab">
+                <span>Email</span>
+                <input
+                  class="gift-request-popup-form__input--error"
+                  type="text"
+                  id="request-email-gift"
+                  name="request[mail]"
+                  aria-label="Email"
+                  tabindex="1"
+                />
+              </div>
+
+              <div class="account__form-tab">
+                <span>Телефон</span>
+                <input
+                  type="text"
+                  id="request-phone-gift"
+                  name="request[phone]"
+                  aria-label="Телефон"
+                  tabindex="1"
+                />
+              </div>
+
+              <div>
+                <div class="checkbox-group">
+                  <label>
+                    <input id="agree" type="checkbox" name="agree" value="1" />
+                  </label>
+                  <div class="account__accept-text">
+                    Погоджуюсь отримувати повідомлення пропозиції, акції
+                    Projector
+                  </div>
+                </div>
+              </div>
+
+              <div class="button js-socials" data-popup="request">
+                <a class="button__link" href="#" tabindex="1">Зберегти зміни</a>
+              </div>
+            </form>
+
+            <p class="account__support-text">
+              Щось не працює? Напиши нашій
+              <a href="mailto:name@email.com">службі підтримки</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% include "partials/_gift-request-popup.html" %} {% include
+"partials/_cancel-subscription-popup.html" %} {% endblock %}

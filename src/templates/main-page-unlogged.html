@@ -1,0 +1,59 @@
+---
+title: Main page - unlogged
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Увійти' %}
+  {% include "partials/_header.html" %}
+
+  {% include "partials/_intro.html" %}
+
+  <div class="container container_padding-small">
+    <h1 class="title title_padding js-main-title title_margin">Библиотека</h1>
+
+    <div class="inner js-inner">
+      {% set sidebar = data.sidebar %}
+      {% include "partials/_sidebar.html" %}
+
+      <main class="main" id="content">
+        {% include "partials/_search.html" %}
+
+        {% set cards = data.mainPageBigCards %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set cards = data.mainPageDefaultCards %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set sliderPopular = data.mainPageSliderPopular %}
+        {% include "partials/_popular-slider.html" %}
+
+        {% set hugeCard = data.mainPageHugeCard %}
+        {% include "partials/_huge-card.html" %}
+
+        {% set cards = data.mainPageDefaultCards2 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% include "partials/_selected-slider.html" %}
+
+        {% set cards = data.mainPageBigCards2 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% set cards = data.mainPageDefaultCards3 %}
+        {% include "partials/_cards-block.html" %}
+
+        {% include "partials/_pagination.html" %}
+      </main>
+    </div>
+  </div>
+
+  {% include "partials/_login-popup.html" %}
+  {% include "partials/_request-popup.html" %}
+  {% include "partials/_gift-request-popup.html" %}
+{% endblock %}

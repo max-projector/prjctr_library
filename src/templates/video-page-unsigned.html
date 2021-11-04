@@ -1,0 +1,31 @@
+---
+title: Video page - Unsigned
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Увійти' %}
+  {% include "partials/_header.html" %}
+
+   <div class="container container_padding-small">
+      <main class="main main_video" id="content">
+        {% set unlogged = true %}
+        {% include "partials/_pagination-top.html" %}
+
+        {% include "partials/_video-content.html" %}
+
+        {% set cards = data.middleCards %}
+        {% include "partials/_other-videos.html" %}
+      </main>
+   </div>
+
+  {% include "partials/_subscribe-popup.html" %}
+  {% include "partials/_login-popup.html" %}
+  {% include "partials/_liked-popup.html" %}
+{% endblock %}

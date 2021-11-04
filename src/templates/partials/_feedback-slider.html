@@ -1,0 +1,58 @@
+<!-- begin feedback-slider -->
+
+<div class="feedback-slider scroll-section" id="reviews">
+  <div class="feedback-slider__heading">
+    <h3 class="course-title">Відгуки</h3>
+  </div>
+
+  <div class="feedback-slider__slider">
+    <div class="feedback-slider__inner gallery js-carousely" data-carousely='{ "cellAlign": "left" }'>
+      {% for item in sliderPopular %}
+      <div class="feedback-slider__student-card gallery-cell">
+        <div class="feedback-slider__image-section">
+          <button class="js-open-popup-button" data-popup="feedback-video">
+            <img
+              class="feedback-slider__play-btn"
+              src="./icons/play-btn.svg"
+              alt=""
+            />
+          </button>
+
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{{ item.imageRetina }}"
+            />
+            <img
+              class="feedback-slider__photo"
+              src="{{ item.image }}"
+              alt="Фото лектора"
+            />
+          </picture>
+        </div>
+        <span class="feedback-slider__name">{{ item.speaker }}</span>
+        <span class="feedback-slider__position">{{ item.speaker }}</span>
+
+        <div class="feedback">
+          <div class="feedback-slider__socials">
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="./icons/facebook-circle.svg" alt="" />
+            </a>
+
+            <a href="https://www.behance.com/" target="_blank">
+              <img src="./icons/behance.svg" alt="" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="./icons/linkedin.svg" alt="" />
+            </a>
+          </div>
+
+          <p class="feedback-slider__student-feedback">{{ item.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- end feedback-slider -->

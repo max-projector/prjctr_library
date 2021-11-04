@@ -1,0 +1,105 @@
+<!-- begin header -->
+
+<header class="header js-header">
+  <div class="skip-content" id="skip">
+    <a class="skip-content__link" href="#content" tabindex="1">Skip to Main Content (Press Enter)</a>
+  </div>
+
+  <div class="header__container container container_wider">
+    <a href="#" class="header__logo logo">
+      <img class="logo__image" src="./img/logo.svg" alt="Логотип Projector"/>
+    </a>
+
+    <button class="header__burger js-burger" type="button" aria-label="Открыть меню">
+      {{ mixins.icon('burger') }}
+    </button>
+
+    <button class="header__close js-close" type="button" aria-label="Закрыть меню">
+      {{ mixins.icon('close-menu') }}
+    </button>
+
+    <div class="header__inner js-menu-inner">
+      <button class="header__login header__login_mob js-open-popup-button" type="button" data-popup="login">
+        {{ mixins.icon('user') }}
+        <span class="js-login">{{ login }}</span>
+      </button>
+
+      <nav class="header__menu menu js-menu">
+        <ul class="menu__list">
+          {% for point in data.menu %}
+          <li class="menu__point {% if point.mod %} {{ point.mod }} {% endif %}">
+            {% if point.include %}
+            <a class="menu__link"  href="{% if point.link %} {{ point.link }} {% endif %}"  tabindex="1">
+              {{ point.name }}
+              {{ mixins.icon('arrow-down') }}
+            </a>
+
+            <ul class="menu__sublist js-sublist">
+              {% for item in point.list %}
+              <li class="menu__subpoint js-menu-point">
+                <a class="menu__subpoint-link" href="{{ item.link }}">
+                  {% if item.image %}
+                  <div class="menu__subpoint-image">
+                    <img class="menu__subpoint-pic" src="{{ item.image }}" alt="{{ item.alt }}"/>
+                  </div>
+                  {% elseif item.icon %}
+                  <div class="menu__subpoint-icon">
+                    {{ mixins.icon(item.icon) }}
+                  </div>
+                  {% endif %}
+
+                  <div class="menu__subpoint-text">
+                    <span class="menu__subpoint-name">{{ item.name }}</span>
+                    {% if item.subtext %}
+                    <span class="menu__subpoint-subtext">{{ item.subtext }}</span>
+                    {% endif %}
+                  </div>
+
+                  {% if item.arrow %}
+                    {{ mixins.icon('arrow-open') }}
+                  {% endif %}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+
+            {% else %}
+            <a class="menu__link" href="{{ point.link }}" tabindex="1">{{ point.name }}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="header__restream"> <span>powered by </span><img src="./icons/restream.svg" alt="" /></div>
+        <a class="header__phone" href="tel:0970159272" tabindex="1">097 015-92-72</a>
+
+        <form class="header__languages js-languages" action="#" method="get">
+          <button class="header__languages-button js-languages-button" type="button" aria-label="Выбор языка" tabindex="1">
+            <span class="header__languages-text js-languages-text">UKR</span>
+             {{ mixins.icon('arrow-down') }}
+          </button>
+
+          <ul class="header__languages-list js-languages-options">
+            <li class="header__languages-item js-languages-item">RU</li>
+            <li class="header__languages-item js-languages-item">ENG</li>
+          </ul>
+
+          <select class="header__languages-select js-languages-hidden" id="languages" name="languages" required>
+            <option value="UKR">UKR</option>
+            <option value="RU">RU</option>
+            <option value="ENG">ENG</option>
+          </select>
+        </form>
+
+        <button class="header__login js-open-popup-button" type="button" data-popup="login" tabindex="1">
+          {{ mixins.icon('user') }}
+          <span>{{ login }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- end header -->

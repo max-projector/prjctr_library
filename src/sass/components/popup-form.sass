@@ -1,0 +1,160 @@
+.popup-form
+	$this: &
+
+	z-index: 2000
+	visibility: hidden
+	pointer-events: none
+	position: fixed
+	bottom: calc(50% - 80px)
+	left: 50%
+	transform: translate(-50%, 50%)
+	transition: bottom $transition, opacity $transition
+	opacity: 0
+
+	+xs
+		bottom: -80px
+		width: 100%
+
+	&__applied
+		display: none
+		margin-bottom: 20px
+
+	&__appliedImg
+		width: 20px
+		height: 20px
+		position: relative
+		top: 4px
+		left: 4px
+
+	&.is-active
+		pointer-events: all
+		bottom: 50%
+		opacity: 1
+
+		+xs
+			bottom: 0
+			transform: translate(-50%, 0)
+
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 420px
+		padding: 41px 23px 60px
+		border-radius: 16px
+		background: $popup-grey
+
+		+xs
+			width: 100%
+			border-radius: 16px 16px 0 0
+
+
+	&__close
+		position: absolute
+		top: 16px
+		right: 16px
+		width: 24px
+		height: 24px
+
+		.icon
+			width: 15px
+			height: 15px
+			stroke: rgba(255, 255, 255, 0.3)
+
+	&__logo
+		margin-bottom: 24px
+
+
+	&__logoImg
+		width: 100px
+		height: 43px
+
+	&__text
+		max-width: 100%
+		margin-bottom: 30px
+		+MontBold
+		font-size: 24px
+		line-height: 1.3em
+		color: $white
+		text-align: center
+
+	&__inputbox
+		width: 100%
+		position: relative
+		display: flex
+		align-items: center
+		height: 100%
+		flex-direction: column
+
+
+	&__input
+		width: 80%
+		height: 100%
+		padding: 11px 30px 11px 15px
+		+MontSemiBold
+		font-size: 16px
+		line-height: 0.9em
+		color: $white
+		border: 2px solid $dark-gray
+		border-radius: 5px
+		background: $black
+		margin-bottom: 24px
+
+		+desktop-big
+			font-size: 14px
+
+		+smd
+			width: 100%
+			padding-right: 45px
+			border-radius: 8px
+
+		&::-ms-clear
+			display: none
+
+		&::-webkit-input-placeholder
+			color: $light-gray
+
+		&::-moz-placeholder
+			color: $light-gray
+
+		&:focus
+			border: 2px solid $gray
+
+			&::-webkit-input-placeholder
+				color: $white
+
+			&::-moz-placeholder
+				color: $white
+
+		&--error
+			border: 2px solid $middle-red
+
+			&:focus
+				border: 2px solid $middle-red
+
+
+	&__button
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 80%
+		height: 48px
+		margin-top: 16px
+		padding: 15px 24px
+		+MontSemiBold
+		font-size: 14px
+		color: $white
+		border-radius: 100px
+
+		+xs
+			width: 100%
+
+		&__red
+			background: #3548fe
+			transition: background $anim
+
+			+hover
+				background: white
+				color: black

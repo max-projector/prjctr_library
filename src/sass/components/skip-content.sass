@@ -1,0 +1,27 @@
+.skip-content
+	z-index: 100
+	position: absolute
+
+	&__link
+		position: absolute
+		left: -10000px
+		top: auto
+		width: 1px
+		height: 1px
+		overflow: hidden
+
+		&:focus
+			position: static
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 330px
+			height: 52px
+			padding: 20px
+			font-size: 16px
+			line-height: 1.4em
+			color: $white
+			border: 1px solid $white
+			border-radius: 100px
+			background: linear-gradient(180deg, #1C1B23 0%, #15141A 97.4%)
+			outline: none

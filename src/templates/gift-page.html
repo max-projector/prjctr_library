@@ -1,0 +1,64 @@
+---
+title: Video page - Unsigned
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Увійти' %}
+  {% include "partials/_header.html" %}
+
+
+<script> 
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
+
+
+
+// componentDidMount() {
+//     const params = queryString.parse(history.location.search);
+
+//     if (Object.keys(params).length) {
+//       for (let key in params) {
+//         if (key.toLocaleLowerCase() === 'code' && params[key].length > 0) {
+//           this.props.setFieldValue('promocode', params[key]);
+//         }
+//       }
+//     }
+//   }
+
+
+
+</script>
+
+
+   <div class="container container_padding-small">
+      <main class="main main_video" id="content">
+        {% set unlogged = true %}
+        {% include "partials/_pagination-top.html" %}
+
+        {% include "partials/_video-content.html" %}
+
+        {% set cards = data.middleCards %}
+        {% include "partials/_other-videos.html" %}
+      </main>
+   </div>
+
+  {% include "partials/_subscribe-popup.html" %}
+  {% include "partials/_login-popup.html" %}
+  {% include "partials/_liked-popup.html" %}
+{% endblock %}

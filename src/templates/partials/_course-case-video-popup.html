@@ -1,0 +1,38 @@
+<!-- course-case-video-popup -->
+<div
+  class="course-case-video-popup js-popup"
+  data-name="case-video"
+  id="myModal"
+>
+  <div class="login-popup course-case-video-popup__inner">
+    <button class="course-case-video-popup__close js-popup-close">
+      {{ mixins.icon('close-popup') }}
+    </button>
+
+    <script>
+      $(document).ready(function () {
+        var url = $("#caseVideo").attr("src");
+
+        $(".course-case-video-popup__close").click(function () {
+          $("#caseVideo").attr("src", "");
+        });
+
+        $(".course-cases-slider__play-btn").click(function () {
+          $("#caseVideo").attr("src", url);
+        });
+      });
+    </script>
+
+    <div class="course-case-video-popup__main">
+      <div class="course-case-video-popup__video">
+        <iframe
+          id="caseVideo"
+          src="https://www.youtube.com/embed/rY-LV4lD97U?version=3&amp;rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;mute=0&amp;listType=playlist"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,238 @@
+<!-- begin sidebar -->
+
+<div class="sidebar js-filters-slider">
+  <div style="display: flex; flex-direction: column; align-content: center">
+    <ul class="sidebar__list">
+      {% for point in sidebar %}
+      <li
+        class="sidebar__point {% if point.mod %} {{ point.mod }} {% endif %} js-sidebar-point"
+        {%
+        if
+        point.id
+        %}
+        id="{{ point.id }} {% endif %}"
+        tabindex="1"
+      >
+        <button class="sidebar__button" type="button">
+          <span class="sidebar__name"
+            >{% if point.icon %} {{mixins.icon(point.icon)}} {% endif %} {{
+            point.name }}</span
+          >
+          <span class="sidebar__count">{{ point.count }}</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="filter-section">
+      <span class="option-title">Формат</span>
+
+      <label for="s-option" class="l-radio">
+        <div>
+          <input type="radio" id="s-option" name="selector" tabindex="1" />
+          <span>Всі</span>
+        </div>
+        <span>2</span>
+      </label>
+
+      <label for="q-option" class="l-radio">
+        <div>
+          <input type="radio" id="q-option" name="selector" tabindex="1" />
+          <span>Відеолекції</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="w-option" class="l-radio">
+        <div>
+          <input type="radio" id="w-option" name="selector" tabindex="1" />
+          <span>Конференції</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="e-option" class="l-radio">
+        <div>
+          <input type="radio" id="e-option" name="selector" tabindex="1" />
+          <span>Плейлисти</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="r-option" class="l-radio">
+        <div>
+          <input type="radio" id="r-option" name="selector" tabindex="1" />
+          <span>Відеокурси</span>
+        </div>
+        <span>22</span>
+      </label>
+    </div>
+
+    <div class="filter-section">
+      <span class="option-title">Напрямки</span>
+      <label for="ll-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="ll-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Всі</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="x-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="x-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Dev & DS</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="c-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="c-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Graphics</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="rr-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="rr-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Interface Design</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="b-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="b-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Management</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="t-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="t-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Marketing</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="m-option" class="l-radio">
+        <div>
+          <input
+            type="radio"
+            id="m-option"
+            name="selector-second"
+            tabindex="1"
+          />
+          <span>Creative Ads</span>
+        </div>
+        <span>22</span>
+      </label>
+    </div>
+
+    <div class="filter-section disabled">
+      <span class="option-title">Рівень</span>
+
+      <label for="rv-option" class="l-radio">
+        <div>
+          <input
+            disabled
+            type="radio"
+            id="rv-option"
+            name="selector"
+            tabindex="1"
+          />
+          <span>Будь-який</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="rq-option" class="l-radio">
+        <div>
+          <input
+            disabled
+            type="radio"
+            id="rq-option"
+            name="selector"
+            tabindex="1"
+          />
+          <span>Початківцям</span>
+        </div>
+        <span>22</span>
+      </label>
+
+      <label for="rz-option" class="l-radio">
+        <div>
+          <input
+            disabled
+            type="radio"
+            id="rz-option"
+            name="selector"
+            tabindex="1"
+          />
+          <span>Спеціалістам</span>
+        </div>
+        <span>22</span>
+      </label>
+    </div>
+
+    <div
+      class="sidebar_gift"
+      style="
+        border: 1px solid #201e29;
+        border-radius: 8px;
+        padding: 20px 16px;
+        max-width: 193px;
+      "
+    >
+      <div style="font-size: 16px; line-height: 24px; margin-bottom: 8px">
+        Подаруйте підписку тим, хто в темі
+      </div>
+
+      <div style="font-size: 12px; color: #8c899a; line-height: 18px">
+        Річний доступ за 950 грн до всієї відеобібліотеки та онлайн конференцій
+      </div>
+
+      <div class="button button_smaller" style="margin-top: 15px">
+        <button class="button__link" type="button">
+          <img src="./icons/gifft.svg" alt="" style="margin-right: 8px" />
+          Подарувати
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end sidebar -->

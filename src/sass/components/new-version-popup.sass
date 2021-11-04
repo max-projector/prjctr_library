@@ -1,0 +1,82 @@
+.new-version-popup
+	$this: &
+
+	z-index: 2000
+	visibility: visible
+	pointer-events: none
+	position: fixed
+	bottom: calc(50% - 80px)
+	left: 50%
+	transform: translate(-50%, 50%)
+	transition: bottom $transition, opacity $transition
+	opacity: 0
+
+	+xs
+		bottom: -80px
+		width: 100%
+
+	&.is-active
+		pointer-events: all
+		bottom: 50%
+		opacity: 1
+
+		+xs
+			bottom: 0
+			transform: translate(-50%, 0)
+
+	&__inner
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 350px
+		padding: 41px 23px 42px
+		border-radius: 16px
+		background: $popup-grey
+
+		+xs
+			width: 100%
+			border-radius: 16px 16px 0 0
+
+	&__close
+		position: absolute
+		top: 16px
+		right: 16px
+		width: 24px
+		height: 24px
+
+		.icon
+			width: 15px
+			height: 15px
+			stroke: rgba(255, 255, 255, 0.3)
+
+	&__logo
+		margin-bottom: 12px
+
+	&__logoImg
+		width: 100px
+		height: 43px
+
+	&__text
+		+Trailers
+		max-width: 100%
+		margin-bottom: 30px
+		font-size: 32px
+		line-height: 1.3em
+		color: $white
+		text-align: center
+
+	&__emojii
+		font-size: 24px
+		color: #8C899A
+
+	&__desc
+		text-align: center
+		color: #8C899A
+		font-size: 14px
+		line-height: 22px
+		margin-bottom: 30px
+		margin-top: 35px
+
+	&__button
+		min-width: 257px

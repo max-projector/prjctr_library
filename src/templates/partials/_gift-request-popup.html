@@ -1,0 +1,21 @@
+<!-- begin gift-request-popup -->
+
+<div class="gift-request-popup-form js-popup" data-name="gift-request">
+  <div class="login-popup gift-request-popup-form__inner">
+    <button class="gift-request-popup-form__close js-popup-close">{{ mixins.icon('close-popup') }}</button>
+    <div class="gift-request-popup-form__logo logo_center">
+      <img class="gift-request-popup-form__logoImg" src="./img/logo.svg" alt="Логотип Projector" />
+    </div>
+    <p class="gift-request-popup-form__text">Подарувати бібліотеку</p>
+    <form class="gift-request-popup-form__inputbox js-lead" method="post" novalidate>
+      <input type="hidden" name="request[id]" value="2434" />
+      <input class="gift-request-popup-form__input" type="text" placeholder="Прізвище" id="request-lastname-gift" name="request[lastname]" aria-label="Прізвище" tabindex="1" />
+      <input class="gift-request-popup-form__input" type="text" placeholder="Ім’я" id="request-name-gift" name="request[firstname]" aria-label="Ім’я" tabindex="1" />
+      <input class="gift-request-popup-form__input gift-request-popup-form__input--error" type="text" placeholder="Email" id="request-email-gift" name="request[mail]" aria-label="Email" tabindex="1" />
+      <input class="gift-request-popup-form__input" type="text" placeholder="Телефон" id="request-phone-gift" name="request[phone]" aria-label="Телефон" tabindex="1" />
+      <button class="gift-request-popup-form__button gift-request-popup-form__button__red js-socials" type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<!-- end gift-request-popup -->

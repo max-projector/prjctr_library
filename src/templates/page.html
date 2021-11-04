@@ -1,0 +1,25 @@
+---
+title: Static page
+---
+
+{% import "data/data.html" as data %}
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% set login = 'Увійти' %}
+  {% include "partials/_header.html" %}
+
+   <div class="container container_padding-small">
+      <main class="page" id="content">
+        {% include "partials/_page-content.html" %}
+      </main>
+   </div>
+
+  {% include "partials/_subscribe-popup.html" %}
+  {% include "partials/_login-popup.html" %}
+  {% include "partials/_liked-popup.html" %}
+{% endblock %}

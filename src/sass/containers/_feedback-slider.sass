@@ -1,0 +1,175 @@
+.feedback-slider
+	margin-bottom: 70px
+	margin-top: 34px
+
+	.carousely-button
+		background: #333
+
+	.carousely-button:hover
+		background: #333
+		opacity: .7
+
+	.carousely-prev-next-button
+		top: 20%
+		width: 48px
+		height: 48px
+		border-radius: 50px
+		z-index: 15
+
+		+sm
+			display: none
+
+	.carousely-button-icon
+		fill: white
+
+	.carousely-prev-next-button .carousely-button-icon
+		position: absolute
+		left: 38%
+		top: 38%
+		width: 12px
+		height: 12px
+
+	.carousely-prev-next-button.previous
+		left: -28px
+
+		+smd
+			left: 13px
+
+	.carousely-prev-next-button.next
+		right: 13px
+
+	.carousely-page-dots
+		display: none
+
+	.carousely-button:disabled
+		display: none
+
+	&__button
+		width: 100%
+		padding: 15px 16px
+		background: #ffffff1c
+		color: #fff
+		border-radius: 40px
+		font-size: 15px
+		max-width: 183px
+		font-family: "Mont Semi Bold","Arial",sans-serif
+		margin-bottom: 13px
+
+		+sm
+			display: none
+
+	&__button:hover
+		transition: .1s!important
+		background: #a00304
+
+	&__heading
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 30px
+
+	&__slider
+		position: relative
+		left: 0
+		max-width: 100vw
+		margin-right: calc(50% - 50vw + 180px)
+
+		+smd
+			margin: 0 -30px
+
+		+sm
+			margin: 0 -30px
+
+		&::after
+			z-index: 10
+			content: ""
+			position: absolute
+			top: 0
+			right: -22px
+			width: 180px
+			height: 100%
+			background: linear-gradient(to right, rgba(16, 16, 20, 0) 0.35%, #101014 93.56%)
+
+			+sm
+				display: none
+
+	&__inner
+		width: calc(100% + 20px)
+		padding-bottom: 25px
+
+		+smd
+			padding-left: 30px
+
+		+sm
+			width: 100%
+			padding-left: 30px
+			scroll-snap-type: x mandatory
+
+		&::-webkit-scrollbar
+			visibility: hidden
+
+	&__socials img
+		width: 24px
+		margin-bottom: 10px
+		cursor: pointer
+		margin-right: 5px
+
+	&__socials img:hover
+		opacity: .7
+
+	&__image-section
+		position: relative
+		width: 290px
+		height: 273px
+		margin-bottom: 15px
+
+		button
+			display: block
+
+	&__student-card
+		width: 290px
+
+		margin-right: 20px
+
+	&__play-btn
+		width: 50px
+		position: absolute
+		bottom: 15px
+		left: 15px
+		cursor: pointer
+
+	&__play-btn:hover
+		opacity: .7
+
+	&__photo
+		border-radius: 20px
+		padding: 0
+		margin: 0
+		width: 100%
+		height: 100%
+		margin: 0 0 15px 0
+
+	&__name
+		letter-spacing: -0.2px
+		font-style: normal
+		font-weight: 100
+		text-decoration: none
+		text-transform: none
+		font-size: 24px
+		color: rgba(255, 255, 255, 1)
+		display: block
+
+	&__position
+		text-transform: uppercase
+		letter-spacing: 1.6px
+		font-size: 13px
+		color: rgba(142, 114, 42, 1)
+		margin: 9px 0 4px -1px
+		display: block
+		line-height: 1.24
+
+	&__student-feedback
+		letter-spacing: -0.2px
+		color: rgba(109, 117, 127, 1)
+		font-size: 16px
+		padding-right: 15px

@@ -1,0 +1,39 @@
+<!-- course-feedback-popup -->
+<div
+  class="course-feedback-popup js-popup"
+  data-name="feedback-video"
+>
+  <div class="login-popup course-feedback-popup__inner">
+    <button class="course-feedback-popup__close js-popup-close">
+      {{ mixins.icon('close-popup') }}
+    </button>
+
+
+    <script>
+      $(document).ready(function () {
+        var url = $("#feedbackVideo").attr("src");
+
+        $(".course-feedback-popup__close").click(function () {
+          $("#feedbackVideo").attr("src", "");
+        });
+
+        $(".feedback-slider__play-btn").click(function () {
+          $("#feedbackVideo").attr("src", url);
+        });
+      });
+    </script>
+
+    <div class="course-feedback-popup__main">
+      <div class="course-feedback-popup__video">
+        <iframe
+          id="feedbackVideo"
+          src="https://www.youtube.com/embed/DG3iQzSUYLk?version=3&amp;rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;mute=0&amp;listType=playlist"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- course-feedback-popup -->
