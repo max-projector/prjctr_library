@@ -1,8 +1,12 @@
 ProjectTitle: Бібліотека Projector
 
 PageList:
-- file: video-page-signed-new.html
+- file: playlist-page-signed-new.html
   ready: 100  
+
+- file: main-page-redesign-second.html
+  ready: 100    
+
 
 - file: video-page-unsigned-event-register.html
   ready: 100    

@@ -1,21 +1,28 @@
 <!-- begin intro-black-friday -->
 
 <div class="intro-black-friday">
-  <div
-    style="
-      background: linear-gradient(
-        180deg,
-        rgba(16, 16, 20, 0) 0%,
-        #101014 90.41%
-      );
-      width: 100%;
-      height: 100%;
-    "
-  >
-    <div class="container">
+  <div class="intro-black-friday__gradient"> </div>
+  <div class="container">
+
+    <div class="video-container">
+      <div class="bg-img"></div>
+       <video muted loop autoplay poster="img/poster.png">
+        <source src="/video/2.mp4" type='video/mp4;'>
+        Тег video не поддерживается вашим браузером. 
+       </video>
+
+      <div class="intro-black-friday__deadline">тільки 26/11/21</div>
+   
       <div class="intro-black-friday__action">
+        <h1>
+          <span class="intro-black-friday__top_text" >black friday sale <br /><span>в бібліотеці</span></span>
+          <span class="intro-black-friday__bottom_text"
+            >стискаємо <br />
+            <span> ціну на 50%</span></span
+          >
+        </h1>
+
         <div class="intro-black-friday__container">
-          <h1>Текст который будет до ЧП</h1>
           <button
             class="
               intro-black-friday__button
@@ -25,14 +32,13 @@
             type="button"
             data-popup="login"
           >
-            <span class="intro-black-friday__content"
-              >Нагадайте про знижку</span
-            >
+            <span class="intro-black-friday__content">Нагадати про знижку</span>
           </button>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- end intro-black-friday -->

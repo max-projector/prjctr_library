@@ -1,0 +1,62 @@
+---
+title: Main page - unlogged
+---
+
+{% import "data/data.html" as data %} {% import "partials/_mixins.html" as
+mixins %} {% extends "layouts/_layout.html" %} {% block content %} {% set login
+= 'Увійти' %} {% include "partials/_header.html" %} {% include
+"partials/_intro-black-friday-second.html" %}
+
+<div class="container container_padding-xs">
+  {% include "partials/_topbar.html" %}
+
+
+  <div class="inner js-inner">
+    {% set sidebar = data.sidebar %} {% include "partials/_sidebar.html" %} {%
+    set sidebarVideoFormat = data.sidebarVideoFormat %} {% set
+    sidebarVideoDirection = data.sidebarVideoDirection %} {% set
+    sidebarVideoLevel = data.sidebarVideoLevel %}
+    
+    <main class="main" id="content">
+      <h4 class="popular-lections__title title title_margin title_tiny">
+        Дивись зараз
+      </h4>
+
+      {% set hugeCard = data.mainPageHugeCard %} {% include
+      "partials/_huge-card.html" %}
+
+      <h4 class="popular-lections__title title title_margin title_tiny">
+        Плейлісти
+      </h4>
+
+      {% set cards = data.mainPagePlaylistsTwice %} {% include
+      "partials/_cards-block.html" %}
+
+      <h4 class="popular-lections__title title title_margin title_tiny">
+        Плейлісти
+      </h4>
+
+      {% set cards = data.mainPagePlaylists %} {% include
+      "partials/_cards-block.html" %}
+
+      <h4 class="popular-lections__title title title_margin title_tiny">
+        Відеолекціі
+      </h4>
+
+      {% set cards = data.mainPageBigCards %} {% include
+      "partials/_cards-block.html" %} {% set cards = data.mainPageDefaultCards
+      %} {% include "partials/_cards-block.html" %} {% set sliderPopular =
+      data.mainPageSliderPopular %} {% include "partials/_popular-slider.html"
+      %} {% set hugeCard = data.mainPageHugeCard %} {% include
+      "partials/_huge-card.html" %} {% set cards = data.mainPageDefaultCards2 %}
+      {% include "partials/_cards-block.html" %} {% include
+      "partials/_selected-slider.html" %} {% set cards = data.mainPageBigCards2
+      %} {% include "partials/_cards-block.html" %} {% include
+      "partials/_pagination.html" %}
+    </main>
+  </div>
+</div>
+
+{% include "partials/_login-popup.html" %} {% include
+"partials/_new-version-popup.html" %} {% include "partials/_request-popup.html"
+%} {% include "partials/_gift-request-popup.html" %} {% endblock %}

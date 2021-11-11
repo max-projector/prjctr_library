@@ -2,102 +2,163 @@
 	position: relative
 	// padding-top: 102px
 	height: 552px
-	background: #36343E
+	background: black
 
-	&__blinking
-		animation: 1s blink ease infinite
-		margin-left: 6px
+	+sm
+		height: 600px
 
-	&__slider
-		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125)
-		min-height: 573px
-		height: 573px
-		margin: auto
-		overflow: hidden
+	.video-container
 		position: relative
-		width: 100%
+		height: 100%
+		overflow: hidden
 
 		+sm
-			min-height: auto
-			height: auto
+			overflow-x: hidden
+			overflow-y: auto
 
-	&__slide-track
-		animation: scroll 80s linear infinite
-		display: flex
+		.bg-img
+			position: absolute
+			background: url(/img/bf-2.jpeg) no-repeat #000
+			background-size: contain
+			width: 100%
+			height: 100%
+			z-index: 0
+			display: none
+			background-position: 50% 5%
 
-	&__slide
-		height: 576px
-		width: 264px
-		margin-right: 20px
+			+sm
+				display: block
 
-		img
-			height: 576px
-			width: 264px
+			+xs
+				background-position: 50% 35%
+
+	.container
+		height: 100%
+		width: 100%
+
+	&__gradient
+		background: linear-gradient(180deg, rgba(16, 16, 20, 0) 0%, #101014 90.41%)
+		width: 100%
+		position: absolute
+		bottom: 0
+		height: 250px
+		z-index: 9
+
+		+sm
+			display: none
+
+	h1
+		+UniversLTCYR
+		color: #3548FE
+		font-size: 60px
+		letter-spacing: -0.03em
+		font-family: 'Univers LT CYR'
+		text-transform: uppercase
+		line-height: 1
+		font-weight: 400
+
+		+sm
+			font-size: 36px
+
+	&__top_text
+		text-align: right
+		display: block
+
+		span
+			position: relative
+			top: -5px
+			left: -12px
+
+	&__bottom_text
+		color: white
+		display: block
+		text-align: right
+		position: relative
+		top: -11px
+		right: 14px
+
+		span
+			text-align: left
+			display: block
+			position: relative
+			left: 15px
+			top: -5px
+
+			+sm
+				text-align: right
+
+	&__deadline
+		color: white
+		font-size: 35px
+		font-family: 'Univers LT CYR'
+		text-transform: uppercase
+		letter-spacing: -0.03em
+		line-height: 1
+		position: absolute
+		right: -3px
+		z-index: 10
+		bottom: 60px
+
+		+sm
+			display: none
 
 	&__content
 		z-index: 3
 
-	&__desc
-		font-size: 16px
-		margin-top: 17px
-		text-align: center
+	video
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 28px
+		left: -21px
+		width: 100%
+		height: 100%
+		min-width: 100%
+		min-height: 100%
+		z-index: 0
+
+		+sm
+			display: none
 
 	&__action
 		z-index: 10
 		position: absolute
-		bottom: 9%
+		bottom: 99px
 		display: flex
 		flex-direction: column
-		align-items: center
-		// width: 100%
 
 		+sm
-			bottom: 20%
-
-		h1
-			+MontSemiBold
-			font-size: 24px
-			font-weight: 400
-			color: #fff
-			margin-bottom: 36px
-			z-index: 10
-
-			+smd
-				font-size: 22px
-
-			+sm
-				font-size: 20px
-				line-height: 1.1em
+			bottom: 0
+			top: 100px
+			width: 100%
+			justify-content: space-between
+			margin-bottom: 10px
 
 	&__container
 		position: relative
 		display: flex
 		flex-direction: column
 		align-items: flex-start
-		margin-top: 34px
+		margin-top: 4px
+		margin-bottom: 28px
 
 		+sm
 			flex-direction: column
+			align-items: center
+			margin-bottom: 0
 
 	&__price
 		font-size: 16px
 
 	&__button
-		padding: 19px 32px
+		font-size: 14px
+		padding: 14px 16px
 		z-index: 3
+		min-width: 205px
+		min-height: 48px
 
 		+hover
 			color: black
 
-@keyframes scroll
-	0%
-		transform: translateX(0)
-	100%
-		transform: translateX(calc(-284px * 10))
-
-@keyframes "blink"
-	from, to 
-		opacity: 0
-
-	50%
-		opacity: 1
+		+xs
+			min-width: 100%

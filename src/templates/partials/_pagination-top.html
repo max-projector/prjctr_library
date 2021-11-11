@@ -7,7 +7,7 @@
   </a>
 
   {% if unlogged === true %}
-  <div class="pagination-top__like-button button button_smaller button_bold">
+  <div class=" {% if disableFavorite %} hide {% endif %}  pagination-top__like-button button button_smaller button_bold ">
     <button class="button__link js-open-popup-button" type="button" data-popup="like">
       {{ mixins.icon('bookmark-off') }}
       Додати обране
@@ -15,8 +15,9 @@
   </div>
 
   {% else %}
+  
 
-  <div class="pagination-top__like-button button button_smaller button_bold">
+  <div class=" {% if disableFavorite %} hide {% endif %}   pagination-top__like-button button button_smaller button_bold">
     <button class="button__link" type="button">
       {{ mixins.icon('bookmark-on') }}
       Додати обране

@@ -1,0 +1,165 @@
+.header-filters-menu
+	margin-top: 60px
+	margin-bottom: -30px
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: flex-start
+	align-content: flex-start
+	align-items: flex-start
+
+.header-filter
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 1001
+	overflow: hidden
+
+	.button-close
+		background-color: #201e29
+		padding: 14px 28px
+		max-width: 109px
+		max-height: 48px
+		min-width: 109px
+		min-height: 48px
+
+	.results_btn
+		position: absolute
+		bottom: 24px
+		left: 0
+		right: 0
+		margin: 0 40px
+		z-index: 10
+
+	&__top-panel
+		height: 80px
+		background: black
+		position: sticky
+		top: 0
+		left: 0
+		width: 100%
+		display: flex
+		z-index: 10
+		justify-content: space-between
+		align-items: center
+
+	&--hidden
+		display: none
+
+	&__overlay
+		background-color: #101014
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0.7
+		transition: all .4s
+
+		.header-filter--offcanvas &
+			opacity: 0
+
+	&__pane
+		position: absolute
+		background-color: black
+		padding: 0 16px
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1
+		overflow-y: scroll
+		overflow-x: hidden
+		height: 100%
+		transition: all .4s
+		transform: translate3d(0, 0, 0)
+
+		.header-filter--offcanvas &
+			transform: translate3d(0, 110%, 0)
+
+	&__close
+		// position: absolute
+		// background: white
+		// width: 20px
+		// height: 20px
+		// padding: 0
+		// top: 30px
+		// right: 30px
+
+	&__tip
+		margin-bottom: 20px
+		color: white
+		font-size: 14px
+		letter-spacing: 0.1em
+		text-transform: uppercase
+
+		&--offset-md
+			margin-top: 30px
+
+		&--offset-lg
+			margin-top: 50px
+
+	&__list:last-child
+		margin-bottom: 100px
+
+	&__list
+		li
+			position: relative
+			margin-top: 12px
+			color: #8c899a
+			display: flex
+			justify-content: space-between
+
+			&:first-child
+				margin-top: 0
+
+		input
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			z-index: 1
+
+			&:checked
+
+				~ span
+					color: white
+
+				~ i:before
+					content: ''
+
+					display: block
+					position: absolute
+					background-color: white
+					width: 8px
+					height: 8px
+					top: 50%
+					left: 50%
+					margin: -4px 0 0 -4px
+					border-radius: 50%
+
+		span
+			display: inline-block
+			font-size: 25px
+			line-height: 1
+			letter-spacing: -0.03em
+
+		i
+			position: relative
+			display: inline-block
+			border: 1px solid #8c899a
+			width: 14px
+			height: 14px
+			margin-top: -2px
+			margin-right: 10px
+			border-radius: 50%
+			vertical-align: middle
+
+	&__apply
+		margin-top: 20px
+
+	&__btn
+		&--hidden
+			opacity: 0
+			pointer-events: none

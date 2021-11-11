@@ -7,16 +7,17 @@ mixins %} {% extends "layouts/_layout.html" %} {% block content %} {% set login
 = 'Увійти' %} {% include "partials/_header.html" %} {% include
 "partials/_intro-black-friday.html" %}
 
-<div class="container container_padding-big">
+<div class="container container_padding-xs">
   {% include "partials/_topbar.html" %}
 
 
   <div class="inner js-inner">
+    {% include "partials/_filters-header-all-courses.html" %}
     {% set sidebar = data.sidebar %} {% include "partials/_sidebar.html" %} {%
     set sidebarVideoFormat = data.sidebarVideoFormat %} {% set
     sidebarVideoDirection = data.sidebarVideoDirection %} {% set
     sidebarVideoLevel = data.sidebarVideoLevel %}
-
+    
     <main class="main" id="content">
       <h4 class="popular-lections__title title title_margin title_tiny">
         Дивись зараз

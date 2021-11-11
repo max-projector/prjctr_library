@@ -1,6 +1,51 @@
 .topbar
 	margin-bottom: 24px
 
+	+sm
+		margin-bottom: 0
+
+
+	.gift-button
+		min-width: auto
+		min-height: auto 
+		width: 49px 
+		height: 49px
+		display: none
+
+		+sm
+			display: block
+
+	.filter-btn
+		display: none	
+
+		+sm
+			display: flex
+			min-width: 278px
+			margin-left: 10px
+
+		+xs
+			min-width: 128px
+			margin-left: 5px	
+
+
+
+	.mobile	
+		justify-content: space-between
+		margin-top: 20px
+		display: none
+
+		+sm
+			display: flex
+
+	.top-section
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	.desktop-search
+		+sm
+			display: none	
+
 	// &__rounded
 	// 	svg
 	// 		fill: white !important
@@ -8,8 +53,6 @@
 	// 	input
 	// 		border-radius: 100px
 	// 		border: 1px solid $dark-gray
-
-
 
 	// &__form
 	// 	position: relative

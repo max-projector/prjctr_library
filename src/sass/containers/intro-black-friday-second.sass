@@ -1,0 +1,162 @@
+.intro-black-friday-second
+	position: relative
+	// padding-top: 102px
+	height: 583px
+	background: black
+
+	+sm
+		height: 700px
+
+	.video-container
+		position: relative
+		height: 100%
+		overflow: hidden
+
+		+sm
+			overflow-x: hidden
+			overflow-y: auto
+
+		.bg-img
+			position: absolute
+			background: url(/img/bf-1.jpeg) no-repeat #000
+			background-size: contain
+			width: 100%
+			height: 100%
+			z-index: 0
+			display: none
+			background-position: 50% 5%
+
+			+sm
+				display: block
+
+			+xs
+				background-position: 50% 35%
+
+	.container
+		height: 100%
+		width: 100%
+
+	&__gradient
+		background: linear-gradient(180deg, rgba(16, 16, 20, 0) 0%, #101014 90.41%)
+		width: 100%
+		position: absolute
+		bottom: 0
+		height: 250px
+		z-index: 9
+
+		+sm
+			display: none
+
+	h1
+		+UniversLTCYR
+		color: white
+		font-size: 60px
+		letter-spacing: -0.03em
+		font-family: 'Univers LT CYR'
+		text-transform: uppercase
+		line-height: 1
+		font-weight: 400
+
+		+sm
+			font-size: 36px
+
+	&__top_text
+		text-align: left
+		display: block
+
+		span
+			position: relative
+			top: -5px
+
+	&__bottom_text
+		color: white
+		display: block
+		text-align: right
+		position: relative
+		top: -11px
+		left: 100px
+
+		+sm
+			left: -3px
+
+		span
+			color: #3548FE
+			text-align: left
+			display: block
+			position: relative
+			left: 4px
+			top: -5px
+
+			+sm
+				text-align: right
+
+	&__content
+		z-index: 3
+
+	video
+		width: 100%
+		height: 100%
+		position: absolute
+		top: -2px
+		left: 50px
+		width: 100%
+		height: 100%
+		min-width: 100%
+		min-height: 100%
+		z-index: 0
+
+		+sm
+			display: none
+
+	&__action
+		z-index: 10
+		position: absolute
+		bottom: 99px
+		// left: 10px
+		display: flex
+		flex-direction: column
+
+		+sm
+			bottom: 0
+			top: 100px
+			width: 100%
+			justify-content: space-between
+			margin-bottom: 10px
+
+	&__container
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		margin-top: 1px
+		margin-bottom: 31px
+
+		+sm
+			flex-direction: column
+			align-items: center
+			margin-bottom: 0
+
+	&__price
+		font-size: 16px
+
+	&__button
+		font-size: 14px
+		padding: 14px 16px
+		z-index: 3
+		min-width: 159px
+		min-height: 48px
+
+		+hover
+			color: black
+
+		+sm
+			margin-bottom: 8px
+			min-width: 100%
+
+	.button_gift
+		margin-left: 10px
+		background-color: #201E29
+		padding: 14px 28px
+
+		+sm
+			margin-left: 0

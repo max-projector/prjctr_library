@@ -1,26 +1,26 @@
-<div
-  class="topbar"
->
-  <div style="display: flex; justify-content: space-between; ">
+<div class="topbar">
+  <div class="top-section">
     <h1 class="title js-main-title">Бібліотека</h1>
-
-    <div
-      class="button button_smaller"
-      style="min-width: auto; min-height: auto; width: 49px; height: 49px; display: none;"
-    >
+    <div class="desktop-search">{% include "partials/_search.html" %}</div>
+    <div class="button button_smaller gift-button">
       <button class="button__link" type="button" style="padding: 0">
         <img src="./icons/gifft.svg" alt="" />
       </button>
-    </div> 
+    </div>
   </div>
 
-  <div style="display: none; justify-content: space-between; ">
+  <div class="mobile">
     {% include "partials/_search.html" %}
-    <a
-      class="reserve-now__button button button_dark button_height"
-      href="#"
-      target="_blank"
-      >Фільтр</a
+    {% include "partials/_filters-header-all-courses.html" %}
+    <button
+      class="button button_dark button_height filter-btn header-filters-menu__btn header-filters-menu__btn--filled"
+      type="button"
+      data-filter="filter-options"
     >
+      Фільтр
+    </button>
+
+
   </div>
 </div>
+
